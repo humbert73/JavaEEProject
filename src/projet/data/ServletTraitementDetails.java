@@ -25,15 +25,14 @@ public class ServletTraitementDetails extends HttpServlet {
 
 		// Récupérer l'attribut etudiant de la session
 		int id = (Integer.parseInt(request.getParameter("id")));
-		Integer nbAbsences = GestionFactory.getAbsencesByEtudiantId(id);
-		Etudiant etudiant = GestionFactory.getEtudiantById(id);
+		Etudiant etudiant = EtudiantDAO.getEtudiantById(id);
 
 		if (etudiant == null) {
 			etudiant = new Etudiant();
 		}
 
 		request.setAttribute("etudiant", etudiant);
-		request.setAttribute("nbAbsences", nbAbsences);
+		request.setAttribute("nbAbsences", etudiant.getNbAbsences());
 
 		// Méthode qui transfère le contrôle à une autre servlet
 		loadJSP("/detail.jsp", request, response);

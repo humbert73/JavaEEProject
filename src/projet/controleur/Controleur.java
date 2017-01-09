@@ -11,9 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import projet.data.Etudiant;
-import projet.data.GestionFactory;
-import projet.data.Groupe;
+import projet.data.*;
 
 
 @SuppressWarnings("serial")
@@ -25,6 +23,7 @@ public class Controleur extends HttpServlet {
 
     // INIT
     public void init() throws ServletException {
+        GestionFactory.open();
         urlListe = getServletConfig().getInitParameter("urlListe");
         urlDetails = getServletConfig().getInitParameter("urlDetails");
         urlListeGroupe = getServletConfig().getInitParameter("urlListeGroupe");
@@ -70,9 +69,8 @@ public class Controleur extends HttpServlet {
     private void doListe(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        Collection<Groupe> groupes = GestionFactory.getGroupes();
-
-        Collection<Etudiant> etudiants = GestionFactory.getEtudiants();
+        Collection<Groupe> groupes = GroupeDAO.getAll();
+        Collection<Etudiant> etudiants = EtudiantDAO.getAll();
         request.setAttribute("etudiants", etudiants);
         request.setAttribute("groupes", groupes);
 
@@ -86,9 +84,8 @@ public class Controleur extends HttpServlet {
 
         int id = (Integer.parseInt(request.getParameter("id")));
 
-        Integer nbAbsences = GestionFactory.getAbsencesByEtudiantId(id);
-        Etudiant etudiant = GestionFactory.getEtudiantById(id);
-        Collection<Groupe> groupes = GestionFactory.getGroupes();
+        Etudiant etudiant = EtudiantDAO.getEtudiantById(id);
+        Collection<Groupe> groupes = GroupeDAO.getAll();
 
         if (etudiant == null) {
             etudiant = new Etudiant();
@@ -97,7 +94,7 @@ public class Controleur extends HttpServlet {
         request.setAttribute("etudiant", etudiant);
         request.setAttribute("groupe", etudiant.getGroupe());
         request.setAttribute("groupes", groupes);
-        request.setAttribute("nbAbsences", nbAbsences);
+        request.setAttribute("nbAbsences", etudiant.getNbAbsences());
 
         // Méthode qui transfère le contrôle à une autre servlet
         loadJSP(urlDetails, request, response);
@@ -106,8 +103,8 @@ public class Controleur extends HttpServlet {
     private void doListGroupe(HttpServletRequest request,
                            HttpServletResponse response) throws ServletException, IOException {
         String libelle = request.getParameter("libelle");
-        Collection<Groupe> groupes = GestionFactory.getGroupes();
-        Groupe groupe = GestionFactory.getGroupeByLibelle(libelle);
+        Collection<Groupe> groupes = GroupeDAO.getAll();
+        Groupe groupe = GroupeDAO.getGroupeByLibelle(libelle);
         Collection<Etudiant> etudiants;
         try {
             etudiants = groupe.getEtudiants();
@@ -146,5 +143,8 @@ public class Controleur extends HttpServlet {
         rd.forward(request, response);
     }
 
+    public void destroy() {
+        GestionFactory.close();
+    }
 
 }

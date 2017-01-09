@@ -1,21 +1,47 @@
 package projet.data;
 
-public class Etudiant {
-	
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+/**
+ * Entity implementation class for Entity: Groupe
+ *
+ */
+@Entity
+public class Etudiant implements Serializable {
+
+	@Id
+	@GeneratedValue
 	private Integer id;
+
+	@Column(nullable=false)
 	private String prenom;
+
+	@Column(nullable=false)
 	private String nom;
+
+	@ManyToOne
 	private Groupe groupe;
-	
+
+	private int nbAbsences;
+
+	private static final long serialVersionUID = 1L;
+
 	public Etudiant() {
 		super();
 	}
 	
-	public Etudiant(Integer id, String prenom, String nom) {
+	public Etudiant(Integer id, String prenom, String nom, int nbAbsences) {
 		super();
 		this.id = id;
 		this.prenom = prenom;
 		this.nom = nom;
+		this.nbAbsences = nbAbsences;
 	}
 
 	public Integer getId() {
@@ -48,5 +74,13 @@ public class Etudiant {
 
 	public void setGroupe(Groupe groupe) {
 		this.groupe = groupe;
+	}
+
+	public int getNbAbsences() {
+		return nbAbsences;
+	}
+
+	public void setNbAbsences(int nbAbsences) {
+		this.nbAbsences = nbAbsences;
 	}
 }
