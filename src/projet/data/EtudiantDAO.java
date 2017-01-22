@@ -3,19 +3,9 @@ package projet.data;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-import java.util.Collection;
 import java.util.List;
 
 public class EtudiantDAO {
-
-	
-	public static Etudiant retrieveById(int id) {
-		EntityManager em = GestionFactory.factory.createEntityManager();
-		Etudiant etu = em.find(Etudiant.class, id);
-	    em.close();
-				
-		return etu;
-	}
 	
 	
 	public static Etudiant create(String prenom, String nom, Groupe groupe) {
@@ -32,6 +22,14 @@ public class EtudiantDAO {
 		em.close();
 		
 		return etudiant;
+	}
+
+	public static Etudiant retrieveById(int id) {
+		EntityManager em = GestionFactory.factory.createEntityManager();
+		Etudiant etu = em.find(Etudiant.class, id);
+		em.close();
+
+		return etu;
 	}
 	
 	public static Etudiant update(Etudiant etudiant) {
@@ -82,20 +80,12 @@ public class EtudiantDAO {
 	}
 	
 	public static int removeAll() {
-
-		// Creation de l'entity manager
 		EntityManager em = GestionFactory.factory.createEntityManager();
-
-		//
 		em.getTransaction().begin();
-		
-		// RemoveAll
+
 		int deletedCount = em.createQuery("DELETE FROM Etudiant").executeUpdate();
 
-		// Commit
 		em.getTransaction().commit();
-				
-		// Close the entity manager
 		em.close();
 
 		return deletedCount;
@@ -103,11 +93,7 @@ public class EtudiantDAO {
 
 	// Retourne l'ensemble des etudiants
 	public static List<Etudiant> getAll() {
-
-		// Creation de l'entity manager
 		EntityManager em = GestionFactory.factory.createEntityManager();
-				
-		// Recherche 
 		Query q = em.createQuery("SELECT e FROM Etudiant e");
 
 		@SuppressWarnings("unchecked")
@@ -118,11 +104,7 @@ public class EtudiantDAO {
 
 	// Retourne l'ensemble des etudiants d'un groupe donné
 	public static List<Etudiant> getAllByAbsences() {
-		
-		// Creation de l'entity manager
 		EntityManager em = GestionFactory.factory.createEntityManager();
-
-		// Recherche 
 		Query q = em.createQuery("SELECT e FROM Etudiant e WHERE e.nbAbsences > 0");
 
 		@SuppressWarnings("unchecked")

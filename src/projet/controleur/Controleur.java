@@ -20,6 +20,8 @@ public class Controleur extends HttpServlet {
     private String urlListe;
     private String urlDetails;
     private String urlListeGroupe;
+    private String urlFormAddEtudiant;
+    private String urlFormAddGroupe;
 
     // INIT
     public void init() throws ServletException {
@@ -27,6 +29,8 @@ public class Controleur extends HttpServlet {
         urlListe = getServletConfig().getInitParameter("urlListe");
         urlDetails = getServletConfig().getInitParameter("urlDetails");
         urlListeGroupe = getServletConfig().getInitParameter("urlListeGroupe");
+        urlFormAddEtudiant = getServletConfig().getInitParameter("urlFormAddEtudiant");
+        urlFormAddGroupe = getServletConfig().getInitParameter("urlFormAddGroupe");
     }
 
     // POST
@@ -59,10 +63,45 @@ public class Controleur extends HttpServlet {
             doDetails(request, response);
         } else if (methode.equals("get") && action.equals("/listGroupe")) {
             doListGroupe(request, response);
+        } else if (methode.equals("get") && action.equals("/addEtudiant")) {
+            doAddEtudiant(request, response);
+        } else if (methode.equals("get") && action.equals("/addGroupe")) {
+            doAddGroupe(request, response);
         } else {
             // Autres cas
             doListe(request, response);
         }
+    }
+
+    private void doAddGroupe(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+
+        loadJSP(urlFormAddGroupe, request, response);
+    }
+
+    private void doAddEtudiant(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String url;
+
+        if ( isValidRequestForAddEtudiant(request) ) {
+            Groupe groupe = GroupeDAO.getGroupeByLibelle((String)request.getAttribute("groupe"));
+            Etudiant etudiant = EtudiantDAO.create(
+                    (String) request.getAttribute("prenom"),
+                    (String)request.getAttribute("nom"),
+                    groupe
+            );
+
+            groupe.addEtudiant(etudiant);
+            GroupeDAO.update(groupe);
+
+            url = urlListe;
+        } else {
+            Collection<Groupe> groupes = GroupeDAO.getAll();
+            request.setAttribute("groupes", groupes);
+            url = urlFormAddEtudiant;
+        }
+
+        loadJSP(url, request, response);
     }
 
     //
@@ -101,7 +140,7 @@ public class Controleur extends HttpServlet {
     }
 
     private void doListGroupe(HttpServletRequest request,
-                           HttpServletResponse response) throws ServletException, IOException {
+                              HttpServletResponse response) throws ServletException, IOException {
         String libelle = request.getParameter("libelle");
         Collection<Groupe> groupes = GroupeDAO.getAll();
         Groupe groupe = GroupeDAO.getGroupeByLibelle(libelle);
@@ -147,4 +186,10 @@ public class Controleur extends HttpServlet {
         GestionFactory.close();
     }
 
+    private boolean isValidRequestForAddEtudiant(HttpServletRequest request) {
+        return request.getAttribute("prenom") != null &&
+                request.getAttribute("nom") != null &&
+                request.getAttribute("groupe") != null;
+
+    }
 }

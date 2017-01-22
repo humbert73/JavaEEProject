@@ -1,12 +1,12 @@
 package projet.data;
 
-import java.util.ArrayList;
-import java.util.Collection;
 
 import java.io.Serializable;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Collection;
+
 
 import javax.persistence.*;
 

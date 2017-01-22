@@ -8,22 +8,13 @@ import java.util.List;
 public class GroupeDAO {
 
 	public static Groupe create(String nom) {
-		
-		// Creation de l'entity manager
 		EntityManager em = GestionFactory.factory.createEntityManager();
-		
-		// create
-		em.getTransaction().begin();
 
-		// create new groupe
+		em.getTransaction().begin();
 		Groupe groupe = new Groupe();
 		groupe.setLibelle(nom);
 		em.persist(groupe);
-
-		// Commit
 		em.getTransaction().commit();
-
-		// Close the entity manager
 		em.close();
 		
 		return groupe;
@@ -31,20 +22,11 @@ public class GroupeDAO {
 	
 	
 	public static int removeAll() {
-		
-		// Creation de l'entity manager
 		EntityManager em = GestionFactory.factory.createEntityManager();
 
-		//
 		em.getTransaction().begin();
-		
-		// RemoveAll
 		int deletedCount = em.createQuery("DELETE FROM Groupe").executeUpdate();
-
-		// Commit
 		em.getTransaction().commit();
-		
-		// Close the entity manager
 		em.close();
 		
 		return deletedCount;
@@ -53,13 +35,9 @@ public class GroupeDAO {
 	
 	
 	public static List<Groupe> getAll() {
-
-		// Creation de l'entity manager
 		EntityManager em = GestionFactory.factory.createEntityManager();
-				
-		// Recherche 
-		Query q = em.createQuery("SELECT g FROM Groupe g");
 
+		Query q = em.createQuery("SELECT g FROM Groupe g");
 		@SuppressWarnings("unchecked")
 		List<Groupe> listGroupe = q.getResultList();
 		
@@ -68,12 +46,19 @@ public class GroupeDAO {
 
 	public static Groupe getGroupeByLibelle(String libelle) {
 		EntityManager em = GestionFactory.factory.createEntityManager();
-
 		Query q = em.createQuery("SELECT g FROM Groupe g WHERE libelle='"+libelle+"'");
-
 		Groupe groupe = (Groupe)q.getSingleResult();
 
 		return groupe;
+	}
 
+	public static Groupe update(Groupe groupe) {
+		EntityManager em = GestionFactory.factory.createEntityManager();
+		em.getTransaction().begin();
+		em.merge(groupe);
+		em.getTransaction().commit();
+		em.close();
+
+		return groupe;
 	}
 }

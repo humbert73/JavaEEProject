@@ -36,7 +36,7 @@
             <% } %>
         </ul>
     </div>
-    <button class="btn btn-xs">Ajouter un étudiant</button>
+    <a href="<%= getServletContext().getContextPath() %>/do/addEtudiant" class="btn btn-xs">Ajouter un étudiant</a>
     <table class="table table-striped table-hover" id="table-liste-etudiants">
         <thead>
         <tr>

@@ -39,6 +39,14 @@
 			<param-name>urlListeGroupe</param-name>
 			<param-value>/WEB-INF/JSP/listeGroupe.jsp</param-value>
 		</init-param>
+		<init-param>
+			<param-name>urlFormAddEtudiant</param-name>
+			<param-value>/WEB-INF/JSP/forms/etudiant/add.jsp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>urlFormAddGroupe</param-name>
+			<param-value>/WEB-INF/JSP/forms/groupe/add.jsp</param-value>
+		</init-param>
 
 	</servlet>
 
