@@ -3,11 +3,7 @@
 
 <%-- Directives de page import --%>
 <%--<%@ page import="projet.data.GestionFactory"%>--%>
-<%@ page import="projet.data.Etudiant" %>
 <%@ page import="projet.data.Groupe" %>
-
-<jsp:useBean id="etudiants" type="java.util.Collection<projet.data.Etudiant>" scope="request"/>
-<jsp:useBean id="groupes" type="java.util.Collection<projet.data.Groupe>" scope="request"/>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -25,6 +21,19 @@
 <body>
 <div class="container-fluid">
     <h1>Page d'ajout d'un groupe</h1>
+    <form class="form-horizontal" method="post" action="<%= getServletContext().getContextPath() %>/do/addGroupe">
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="libelle">Libelle :</label>
+            <div class="col-sm-2">
+                <input name="libelle" type="text" class="form-control" id="libelle" placeholder="A1">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>Ajouter</button>
+            </div>
+        </div>
+    </form>
 </div>
 </body>
 </html>

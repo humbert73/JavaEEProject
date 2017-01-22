@@ -31,12 +31,18 @@
         <ul class="dropdown-menu">
             <% for (Groupe groupe : groupes) { %>
             <li>
-                <a href="<%= getServletContext().getContextPath() %>/do/listGroupe?libelle=<%= groupe.getLibelle() %>"><%= groupe.getLibelle() %>
-                </a></li>
+                <a href="<%= getServletContext().getContextPath() %>/do/listGroupe?libelle=<%= groupe.getLibelle() %>">
+                    <%= groupe.getLibelle() %>
+                </a>
+            </li>
             <% } %>
+            <li class="divider"></li>
+            <li><a href="<%= getServletContext().getContextPath() %>/do/formAddGroupe">Ajouter un Groupe</a>
         </ul>
     </div>
-    <a href="<%= getServletContext().getContextPath() %>/do/addEtudiant" class="btn btn-xs">Ajouter un étudiant</a>
+    <div class="container">
+        <a href="<%= getServletContext().getContextPath() %>/do/formAddEtudiant" type="button" class="btn btn-xs btn-default">Ajouter un étudiant</a>
+    </div>
     <table class="table table-striped table-hover" id="table-liste-etudiants">
         <thead>
         <tr>

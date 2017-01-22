@@ -23,6 +23,35 @@
 <body>
 <div class="container-fluid">
     <h1>Page d'ajout d'un étudiant</h1>
+    <form class="form-horizontal" method="post" action="<%= getServletContext().getContextPath() %>/do/addEtudiant">
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="nom">Nom :</label>
+            <div class="col-sm-4">
+                <input name="nom" type="text" class="form-control" id="nom" placeholder="Dupont">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="prenom">Prénom :</label>
+            <div class="col-sm-4">
+                <input name="prenom" type="text" class="form-control" id="prenom" placeholder="Jean">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="groupe">Groupe :</label>
+            <div class="col-sm-1">
+                <select name="groupe" class="form-control" id="groupe">
+                    <% for (Groupe groupe : groupes) { %>
+                    <option><%= groupe.getLibelle() %></option>
+                    <% } %>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>Ajouter</button>
+            </div>
+        </div>
+    </form>
 </div>
 </body>
 </html>

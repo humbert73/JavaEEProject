@@ -31,6 +31,25 @@ public class Controleur extends HttpServlet {
         urlListeGroupe = getServletConfig().getInitParameter("urlListeGroupe");
         urlFormAddEtudiant = getServletConfig().getInitParameter("urlFormAddEtudiant");
         urlFormAddGroupe = getServletConfig().getInitParameter("urlFormAddGroupe");
+
+        ///// INITIALISATION DE LA BD
+        // Normalement l'initialisation se fait directement dans la base de données
+        if ((GroupeDAO.getAll().size() == 0) && (EtudiantDAO.getAll().size() == 0)) {
+
+            // Creation des groupes
+            Groupe MIAM = GroupeDAO.create("miam");
+            Groupe SIMO = GroupeDAO.create("SIMO");
+            Groupe MESSI = GroupeDAO.create("MESSI");
+
+            // Creation des étudiants
+            EtudiantDAO.create("Francis", "Brunet-Manquat", MIAM);
+            EtudiantDAO.create("Philippe", "Martin", MIAM);
+            EtudiantDAO.create("Mario", "Cortes-Cornax", MIAM);
+            EtudiantDAO.create("Françoise", "Coat", SIMO);
+            EtudiantDAO.create("Laurent", "Bonnaud", MESSI);
+            EtudiantDAO.create("Sébastien", "Bourdon", MESSI);
+            EtudiantDAO.create("Mathieu", "Gatumel", SIMO);
+        }
     }
 
     // POST
@@ -63,45 +82,54 @@ public class Controleur extends HttpServlet {
             doDetails(request, response);
         } else if (methode.equals("get") && action.equals("/listGroupe")) {
             doListGroupe(request, response);
-        } else if (methode.equals("get") && action.equals("/addEtudiant")) {
-            doAddEtudiant(request, response);
+        } else if (methode.equals("get") && action.equals("/formAddEtudiant")) {
+            doFormAddEtudiant(request, response);
+        } else if (methode.equals("get") && action.equals("/formAddGroupe")) {
+            doFormAddGroupe(request, response);
         } else if (methode.equals("get") && action.equals("/addGroupe")) {
             doAddGroupe(request, response);
+        } else if (methode.equals("get") && action.equals("/addEtudiant")) {
+            doAddEtudiant(request, response);
         } else {
             // Autres cas
             doListe(request, response);
         }
     }
 
+    private void doFormAddGroupe(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+        loadJSP(urlFormAddGroupe, request, response);
+    }
+
+    private void doFormAddEtudiant(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        Collection<Groupe> groupes = GroupeDAO.getAll();
+        request.setAttribute("groupes", groupes);
+
+        loadJSP(urlFormAddEtudiant, request, response);
+    }
+
     private void doAddGroupe(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
+    	
+        GroupeDAO.create(request.getParameter("libelle"));
 
-        loadJSP(urlFormAddGroupe, request, response);
+        this.doListGroupe(request, response);
     }
 
     private void doAddEtudiant(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String url;
-
-        if ( isValidRequestForAddEtudiant(request) ) {
-            Groupe groupe = GroupeDAO.getGroupeByLibelle((String)request.getAttribute("groupe"));
-            Etudiant etudiant = EtudiantDAO.create(
-                    (String) request.getAttribute("prenom"),
-                    (String)request.getAttribute("nom"),
-                    groupe
-            );
-
-            groupe.addEtudiant(etudiant);
-            GroupeDAO.update(groupe);
-
-            url = urlListe;
-        } else {
-            Collection<Groupe> groupes = GroupeDAO.getAll();
-            request.setAttribute("groupes", groupes);
-            url = urlFormAddEtudiant;
-        }
-
-        loadJSP(url, request, response);
+        Groupe groupe = GroupeDAO.getGroupeByLibelle(request.getParameter("groupe"));
+        Etudiant etudiant = EtudiantDAO.create(
+            request.getParameter("prenom"),
+            request.getParameter("nom"),
+            groupe
+        );
+        groupe.addEtudiant(etudiant);
+        GroupeDAO.update(groupe);
+        
+        this.doListe(request, response);
     }
 
     //
@@ -182,14 +210,8 @@ public class Controleur extends HttpServlet {
         rd.forward(request, response);
     }
 
+    @Override
     public void destroy() {
         GestionFactory.close();
-    }
-
-    private boolean isValidRequestForAddEtudiant(HttpServletRequest request) {
-        return request.getAttribute("prenom") != null &&
-                request.getAttribute("nom") != null &&
-                request.getAttribute("groupe") != null;
-
     }
 }
