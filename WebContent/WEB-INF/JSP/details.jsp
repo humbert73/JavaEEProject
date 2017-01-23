@@ -6,7 +6,6 @@
 <%@ page import="projet.data.*" %>
 
 <jsp:useBean id="etudiant" class="projet.data.Etudiant" scope="request"/>
-<jsp:useBean id="groupe" class="projet.data.Groupe" scope="request"/>
 <jsp:useBean id="groupes" type="java.util.Collection<projet.data.Groupe>" scope="request"/>
 <jsp:useBean id="nbAbsences" type="java.lang.Integer" scope="request"/>
 
@@ -45,7 +44,7 @@
             <tr>
                 <td><jsp:getProperty name="etudiant" property="nom"/></td>
                 <td><jsp:getProperty name="etudiant" property="prenom"/></td>
-                <td><jsp:getProperty name="groupe" property="libelle"/></td>
+                <td><%= etudiant.getGroupe().getLibelle() %></td>
                 <td><%= nbAbsences %></td>
                 <td><button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#modal-edit">Editer</button>
                     <!-- Modal -->
@@ -58,48 +57,47 @@
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                                     <h4 class="modal-title">Modal Header</h4>
                                 </div>
-                                <div class="modal-body">
-                                    <form class="form-horizontal">
+                                <form class="form-horizontal" method="post" action="<%= getServletContext().getContextPath() %>/do/editEtudiant">
+	                                <div class="modal-body">
+	                                    <input name="id" value="<jsp:getProperty name="etudiant" property="id"/>" hidden></input>
                                         <div class="form-group">
-                                            <label class="control-label col-sm-4" for="groupe">Groupe :</label>
-                                            <div class="col-sm-8">
-                                                <div id="groupe" class="dropdown">
-                                                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><jsp:getProperty name="groupe" property="libelle"/>
-                                                        <span class="caret"></span></button>
-                                                    <ul class="dropdown-menu">
-                                                        <% for (Groupe groupe_list : groupes) { %>
-                                                        <li>
-                                                            <a href="<%= getServletContext().getContextPath() %>/do/listGroupe?libelle=<%= groupe_list.getLibelle() %>"><%= groupe_list.getLibelle() %>
-                                                            </a></li>
-                                                        <% } %>
-                                                    </ul>
-                                                </div>
-                                            </div>
+								            <label class="control-label col-sm-4" for="groupe">Groupe :</label>
+								            <div class="col-sm-3">
+								                <select name="groupe" class="form-control" id="groupe">
+								                	<option selected="selected" value="<%= etudiant.getGroupe().getLibelle() %>"><%= etudiant.getGroupe().getLibelle() %></option>
+								                    <% for (Groupe groupe : groupes) { %>
+								                    	<option value="<%= groupe.getLibelle() %>"><%= groupe.getLibelle() %></option>
+								                    <% } %>
+								                </select>
+								            </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-sm-4" for="nom">Nom :</label>
-                                            <div class="col-sm-8">
-                                                <input class="form-control" id="nom" placeholder="<jsp:getProperty name="etudiant" property="nom"/>">
+                                            <div class="col-sm-6">
+                                                <input name="nom" class="form-control" id="nom" placeholder="<jsp:getProperty name="etudiant" property="nom"/>"
+                                                	value="<jsp:getProperty name="etudiant" property="nom"/>">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-sm-4" for="prenom">Prénom :</label>
-                                            <div class="col-sm-8">
-                                                <input class="form-control" id="prenom" placeholder="<jsp:getProperty name="etudiant" property="prenom"/>">
+                                            <div class="col-sm-6">
+                                                <input name="prenom" class="form-control" id="prenom" placeholder="<jsp:getProperty name="etudiant" property="prenom"/>"
+                                                	value="<jsp:getProperty name="etudiant" property="prenom"/>">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-sm-4" for="absence">Nombre d'absence :</label>
-                                            <div class="col-sm-8">
-                                                <input type="number" class="form-control" id="absence" value="<%= nbAbsences %>>">
+                                            <div class="col-sm-2">
+                                                <input name="nbAbsences" type="number" class="form-control" id="absence"
+                                                	value="<jsp:getProperty name="etudiant" property="nbAbsences"/>">
                                             </div>
                                         </div>
-                                    </form>
-                                </div>
+	                                </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Confirmer</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-default">Confirmer</button>
                                 </div>
+                                </form>
                             </div>
                         </div>
                     </div>

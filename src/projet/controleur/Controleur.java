@@ -86,10 +86,12 @@ public class Controleur extends HttpServlet {
             doFormAddEtudiant(request, response);
         } else if (methode.equals("get") && action.equals("/formAddGroupe")) {
             doFormAddGroupe(request, response);
-        } else if (methode.equals("get") && action.equals("/addGroupe")) {
+        } else if (methode.equals("post") && action.equals("/addGroupe")) {
             doAddGroupe(request, response);
-        } else if (methode.equals("get") && action.equals("/addEtudiant")) {
+        } else if (methode.equals("post") && action.equals("/addEtudiant")) {
             doAddEtudiant(request, response);
+        } else if (methode.equals("post") && action.equals("/editEtudiant")) {
+            doEditEtudiant(request, response);
         } else {
             // Autres cas
             doListe(request, response);
@@ -131,6 +133,27 @@ public class Controleur extends HttpServlet {
         
         this.doListe(request, response);
     }
+    
+    private void doEditEtudiant(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        Groupe groupe = GroupeDAO.getGroupeByLibelle(request.getParameter("groupe"));
+        int id = Integer.parseInt(request.getParameter("id"));
+        Etudiant etudiant = EtudiantDAO.getEtudiantById(id);
+        
+        etudiant.setNom(request.getParameter("nom"));
+        etudiant.setPrenom(request.getParameter("prenom"));
+        etudiant.setNbAbsences(Integer.parseInt(request.getParameter("nbAbsences")));
+        etudiant.setGroupe(groupe);
+        groupe.addEtudiant(etudiant);
+        GroupeDAO.update(groupe);
+        EtudiantDAO.update(etudiant);
+        
+        request.setAttribute("id", id);
+        
+        this.doDetails(request, response);
+    }
+    
+    
 
     //
     private void doListe(HttpServletRequest request, HttpServletResponse response)

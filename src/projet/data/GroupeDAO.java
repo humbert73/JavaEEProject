@@ -46,7 +46,7 @@ public class GroupeDAO {
 
 	public static Groupe getGroupeByLibelle(String libelle) {
 		EntityManager em = GestionFactory.factory.createEntityManager();
-		Query q = em.createQuery("SELECT g FROM Groupe g WHERE libelle='"+libelle+"'");
+		Query q = em.createQuery("SELECT g FROM Groupe g WHERE g.libelle='"+libelle+"'");
 		Groupe groupe = (Groupe)q.getSingleResult();
 
 		return groupe;

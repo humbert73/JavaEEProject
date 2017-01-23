@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="032b10b1-b2e8-408b-8fc1-f1c0d305462c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/data/database" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/data/database" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/projet/controleur/Controleur.class" afterPath="$PROJECT_DIR$/build/classes/projet/controleur/Controleur.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/projet/data/EtudiantDAO.class" afterPath="$PROJECT_DIR$/build/classes/projet/data/EtudiantDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/projet/data/Groupe.class" afterPath="$PROJECT_DIR$/build/classes/projet/data/Groupe.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/projet/data/GroupeDAO.class" afterPath="$PROJECT_DIR$/build/classes/projet/data/GroupeDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/JSP/forms/etudiant/add.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/JSP/forms/etudiant/add.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/JSP/forms/groupe/add.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/JSP/forms/groupe/add.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/JSP/liste.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/JSP/liste.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/projet/controleur/Controleur.java" afterPath="$PROJECT_DIR$/src/projet/controleur/Controleur.java" />
-    </list>
+    <list default="true" id="032b10b1-b2e8-408b-8fc1-f1c0d305462c" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -205,10 +193,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="53" />
-    <option name="y" value="21" />
-    <option name="width" value="1313" />
-    <option name="height" value="747" />
+    <option name="x" value="132" />
+    <option name="y" value="213" />
+    <option name="width" value="1303" />
+    <option name="height" value="692" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -1301,12 +1289,12 @@
       <workItem from="1485077533934" duration="66000" />
       <workItem from="1485077696036" duration="854000" />
       <workItem from="1485080324809" duration="9528000" />
-      <workItem from="1485094932222" duration="880000" />
+      <workItem from="1485094932222" duration="1476000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41195000" />
+    <option name="totallyTimeSpent" value="41791000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1318,7 +1306,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="53" y="21" width="1313" height="747" extended-state="6" />
+    <frame x="132" y="213" width="1303" height="692" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1344,7 +1332,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24676314" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24865694" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
