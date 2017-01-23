@@ -1,6 +1,7 @@
 package util.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -43,12 +44,13 @@ public class Etudiant implements Serializable {
 		super();
 	}
 	
-	public Etudiant(Integer id, String prenom, String nom, int nbAbsences) {
+	public Etudiant(Integer id, String prenom, String nom) {
 		super();
 		this.id = id;
 		this.prenom = prenom;
 		this.nom = nom;
-		this.nbAbsences = nbAbsences;
+		this.nbAbsences = 0;
+		this.notes = new ArrayList<>();
 	}
 
 	public Integer getId() {
@@ -89,5 +91,17 @@ public class Etudiant implements Serializable {
 
 	public void setNbAbsences(int nbAbsences) {
 		this.nbAbsences = nbAbsences;
+	}
+
+	public List<Note> getNotes() {
+		return notes;
+	}
+
+	public void setNotes(List<Note> notes) {
+		this.notes = notes;
+	}
+
+	public void addNote(Note note) {
+		this.notes.add(note);
 	}
 }

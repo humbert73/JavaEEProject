@@ -2,7 +2,8 @@ package util.DAO;
 
 
 import util.GestionFactory;
-import util.entities.Groupe;
+import util.entities.Etudiant;
+import util.entities.Note;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -10,17 +11,18 @@ import java.util.List;
 
 public class NoteDAO {
 
-	public static Groupe create(String nom) {
+	public static Note create(Integer value, Etudiant etudiant) {
 		EntityManager em = GestionFactory.factory.createEntityManager();
 
 		em.getTransaction().begin();
-		Groupe groupe = new Groupe();
-		groupe.setLibelle(nom);
-		em.persist(groupe);
+		Note note = new Note();
+		note.setValue(value);
+		note.setEtudiant(etudiant);
+		em.persist(note);
 		em.getTransaction().commit();
 		em.close();
 		
-		return groupe;
+		return note;
 	}
 	
 	
@@ -28,7 +30,7 @@ public class NoteDAO {
 		EntityManager em = GestionFactory.factory.createEntityManager();
 
 		em.getTransaction().begin();
-		int deletedCount = em.createQuery("DELETE FROM Groupe").executeUpdate();
+		int deletedCount = em.createQuery("DELETE FROM Note").executeUpdate();
 		em.getTransaction().commit();
 		em.close();
 		
@@ -37,31 +39,23 @@ public class NoteDAO {
 	
 	
 	
-	public static List<Groupe> getAll() {
+	public static List<Note> getAll() {
 		EntityManager em = GestionFactory.factory.createEntityManager();
 
-		Query q = em.createQuery("SELECT g FROM Groupe g");
+		Query q = em.createQuery("SELECT n FROM Note n");
 		@SuppressWarnings("unchecked")
-		List<Groupe> listGroupe = q.getResultList();
+		List<Note> notes = q.getResultList();
 		
-		return listGroupe;
+		return notes;
 	}
 
-	public static Groupe getGroupeByLibelle(String libelle) {
-		EntityManager em = GestionFactory.factory.createEntityManager();
-		Query q = em.createQuery("SELECT g FROM Groupe g WHERE g.libelle='"+libelle+"'");
-		Groupe groupe = (Groupe)q.getSingleResult();
-
-		return groupe;
-	}
-
-	public static Groupe update(Groupe groupe) {
+	public static Note update(Note note) {
 		EntityManager em = GestionFactory.factory.createEntityManager();
 		em.getTransaction().begin();
-		em.merge(groupe);
+		em.merge(note);
 		em.getTransaction().commit();
 		em.close();
 
-		return groupe;
+		return note;
 	}
 }

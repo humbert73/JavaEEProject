@@ -10,8 +10,9 @@
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		
 		<!-- Classes persistées - liées à tes tables de la base de données -->
-		<class>projet.data.Etudiant</class>
-		<class>projet.data.Groupe</class>
+		<class>util.entities.Etudiant</class>
+		<class>util.entities.Groupe</class>
+		<class>util.entities.Note</class>
 		
 		<!-- Propriétés de l'unité de persistence -->
 		<properties>
@@ -21,7 +22,7 @@
             <!--  en SqlLite, sur un fichier de votre arborescence (en windows c:/etc...) -->
             <!--  en MySql, sur une url du serveur par exemple en local http;//localhost:3306 -->
 
-			<property name="javax.persistence.jdbc.url" value="jdbc:sqlite:/home/moreauhu/sites/mi4/projetSIL4/WebContent/WEB-INF/data/database"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:sqlite:/home/moreauhu/workspace_jee/projetSIL4/WebContent/WEB-INF/data/database"/>
 			<property name="javax.persistence.jdbc.user" value=""/>
 			<property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC"/>
 			

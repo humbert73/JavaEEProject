@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>Gestion des étudiants</display-name>
+
+	<!-- Titre de l'application -->
+	<context-param>
+		<param-name>title</param-name>
+		<param-value>Gestion des étudiants</param-value>
+	</context-param>
+	
+	<!-- URLs communes aux vues -->
+<!-- 	<context-param> -->
+<!-- 		<param-name>entetedepage</param-name> -->
+<!-- 		<param-value>/WEB-INF/JSP/commun/entetedepage.jsp</param-value> -->
+<!-- 	</context-param> -->
+<!-- 	<context-param> -->
+<!-- 		<param-name>pieddepage</param-name> -->
+<!-- 		<param-value>/WEB-INF/JSP/commun/pieddepage.jsp</param-value> -->
+<!-- 	</context-param> -->
+
+
+	<!--========= Gestion des étudiants =========== -->
+	<!-- Servlet controleur -->
+	<servlet>
+		<servlet-name>controleur</servlet-name>
+		<servlet-class>controleur.Controleur</servlet-class>
+		<init-param>
+			<param-name>urlListe</param-name>
+			<param-value>/WEB-INF/JSP/liste.jsp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>urlDetails</param-name>
+			<param-value>/WEB-INF/JSP/details.jsp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>urlListeGroupe</param-name>
+			<param-value>/WEB-INF/JSP/listeGroupe.jsp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>urlFormAddEtudiant</param-name>
+			<param-value>/WEB-INF/JSP/forms/etudiant/add.jsp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>urlFormAddGroupe</param-name>
+			<param-value>/WEB-INF/JSP/forms/groupe/add.jsp</param-value>
+		</init-param>
+
+	</servlet>
+
+	<!-- Mapping URL/Servlet -->
+	<servlet-mapping>
+		<servlet-name>controleur</servlet-name>
+		<url-pattern>/do/*</url-pattern>
+	</servlet-mapping>
+	
+	<!--  fichiers d'accueil -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

@@ -1,0 +1,13 @@
+.detail-name {
+	text-align: right;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.detail-value {
+	font-size: 1.2em;
+}
+
+#table-liste-etudiants tr-header, #table-liste-etudiants tr-header td {
+	padding: 0  !important;
+}

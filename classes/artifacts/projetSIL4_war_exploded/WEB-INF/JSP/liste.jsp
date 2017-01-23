@@ -2,12 +2,12 @@
          pageEncoding="UTF-8" %>
 
 <%-- Directives de page import --%>
-<%--<%@ page import="projet.data.GestionFactory"%>--%>
-<%@ page import="projet.data.Etudiant" %>
-<%@ page import="projet.data.Groupe" %>
+<%--<%@ page import="util.GestionFactory"%>--%>
+<%@ page import="util.entities.Etudiant" %>
+<%@ page import="util.entities.Groupe" %>
 
-<jsp:useBean id="etudiants" type="java.util.Collection<projet.data.Etudiant>" scope="request"/>
-<jsp:useBean id="groupes" type="java.util.Collection<projet.data.Groupe>" scope="request"/>
+<jsp:useBean id="etudiants" type="java.util.Collection<util.entities.Etudiant>" scope="request"/>
+<jsp:useBean id="groupes" type="java.util.Collection<util.entities.Groupe>" scope="request"/>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -31,12 +31,18 @@
         <ul class="dropdown-menu">
             <% for (Groupe groupe : groupes) { %>
             <li>
-                <a href="<%= getServletContext().getContextPath() %>/do/listGroupe?libelle=<%= groupe.getLibelle() %>"><%= groupe.getLibelle() %>
-                </a></li>
+                <a href="<%= getServletContext().getContextPath() %>/do/listGroupe?libelle=<%= groupe.getLibelle() %>">
+                    <%= groupe.getLibelle() %>
+                </a>
+            </li>
             <% } %>
+            <li class="divider"></li>
+            <li><a href="<%= getServletContext().getContextPath() %>/do/formAddGroupe">Ajouter un Groupe</a>
         </ul>
     </div>
-    <button class="btn btn-xs">Ajouter un étudiant</button>
+    <div class="container">
+        <a href="<%= getServletContext().getContextPath() %>/do/formAddEtudiant" type="button" class="btn btn-xs btn-default">Ajouter un étudiant</a>
+    </div>
     <table class="table table-striped table-hover" id="table-liste-etudiants">
         <thead>
         <tr>
