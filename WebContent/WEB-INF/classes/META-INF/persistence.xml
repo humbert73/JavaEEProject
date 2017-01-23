@@ -10,8 +10,9 @@
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		
 		<!-- Classes persistées - liées à tes tables de la base de données -->
-		<class>projet.data.Etudiant</class>
-		<class>projet.data.Groupe</class>
+		<class>util.entities.Etudiant</class>
+		<class>util.entities.Groupe</class>
+		<class>util.entities.Note</class>
 		
 		<!-- Propriétés de l'unité de persistence -->
 		<properties>

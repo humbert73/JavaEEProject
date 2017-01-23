@@ -2,8 +2,8 @@
          pageEncoding="UTF-8" %>
 
 <%-- Directives de page import --%>
-<%--<%@ page import="projet.data.GestionFactory"%>--%>
-<%@ page import="projet.data.Groupe" %>
+<%--<%@ page import="util.GestionFactory"%>--%>
+<%@ page import="util.entities.Groupe" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>

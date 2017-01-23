@@ -3,10 +3,10 @@
 
 
 <%-- Directives de page import --%>
-<%@ page import="projet.data.*" %>
+<%@ page import="util.entities.*" %>
 
-<jsp:useBean id="etudiant" class="projet.data.Etudiant" scope="request"/>
-<jsp:useBean id="groupes" type="java.util.Collection<projet.data.Groupe>" scope="request"/>
+<jsp:useBean id="etudiant" class="util.entities.Etudiant" scope="request"/>
+<jsp:useBean id="groupes" type="java.util.Collection<util.entities.Groupe>" scope="request"/>
 <jsp:useBean id="nbAbsences" type="java.lang.Integer" scope="request"/>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">

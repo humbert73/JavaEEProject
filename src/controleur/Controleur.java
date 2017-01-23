@@ -1,7 +1,6 @@
-package projet.controleur;
+package controleur;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Collection;
 
 import javax.servlet.RequestDispatcher;
@@ -11,7 +10,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import projet.data.*;
+import util.DAO.EtudiantDAO;
+import util.DAO.GroupeDAO;
+import util.GestionFactory;
+import util.entities.Etudiant;
+import util.entities.Groupe;
 
 
 @SuppressWarnings("serial")

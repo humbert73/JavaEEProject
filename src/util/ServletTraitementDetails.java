@@ -1,4 +1,7 @@
-package projet.data;
+package util;
+
+import util.DAO.EtudiantDAO;
+import util.entities.Etudiant;
 
 import java.io.IOException;
 

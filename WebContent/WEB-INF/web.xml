@@ -26,7 +26,7 @@
 	<!-- Servlet controleur -->
 	<servlet>
 		<servlet-name>controleur</servlet-name>
-		<servlet-class>projet.controleur.Controleur</servlet-class>
+		<servlet-class>controleur.Controleur</servlet-class>
 		<init-param>
 			<param-name>urlListe</param-name>
 			<param-value>/WEB-INF/JSP/liste.jsp</param-value>

@@ -2,12 +2,12 @@
          pageEncoding="UTF-8" %>
 
 <%-- Directives de page import --%>
-<%--<%@ page import="projet.data.GestionFactory"%>--%>
-<%@ page import="projet.data.Etudiant" %>
-<%@ page import="projet.data.Groupe" %>
+<%--<%@ page import="util.GestionFactory"%>--%>
+<%@ page import="util.entities.Etudiant" %>
+<%@ page import="util.entities.Groupe" %>
 
-<jsp:useBean id="etudiants" type="java.util.Collection<projet.data.Etudiant>" scope="request"/>
-<jsp:useBean id="groupes" type="java.util.Collection<projet.data.Groupe>" scope="request"/>
+<jsp:useBean id="etudiants" type="java.util.Collection<util.entities.Etudiant>" scope="request"/>
+<jsp:useBean id="groupes" type="java.util.Collection<util.entities.Groupe>" scope="request"/>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>

@@ -1,5 +1,9 @@
-package projet.data;
+package util.DAO;
 
+
+import util.entities.Etudiant;
+import util.GestionFactory;
+import util.entities.Groupe;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;

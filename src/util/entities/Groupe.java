@@ -1,4 +1,4 @@
-package projet.data;
+package util.entities;
 
 
 import java.io.Serializable;

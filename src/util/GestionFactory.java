@@ -1,4 +1,4 @@
-package projet.data;
+package util;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;

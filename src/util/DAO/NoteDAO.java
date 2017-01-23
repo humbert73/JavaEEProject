@@ -1,11 +1,14 @@
-package projet.data;
+package util.DAO;
 
+
+import util.GestionFactory;
+import util.entities.Groupe;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import java.util.List;
 
-public class GroupeDAO {
+public class NoteDAO {
 
 	public static Groupe create(String nom) {
 		EntityManager em = GestionFactory.factory.createEntityManager();
