@@ -4,7 +4,6 @@
 
 <jsp:useBean id="etudiant" class="util.entities.Etudiant" scope="request"/>
 <jsp:useBean id="groupes" type="java.util.Collection<util.entities.Groupe>" scope="request"/>
-<jsp:useBean id="nbAbsences" type="java.lang.Integer" scope="request"/>
 
 <!-- Modal -->
 <div id="modal-etudiant-edit" class="modal fade" role="dialog">
@@ -14,11 +13,11 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Modal Header</h4>
+                <h4 class="modal-title">Edition d'un étudiant</h4>
             </div>
             <form class="form-horizontal" method="post" action="<%= getServletContext().getContextPath() %>/do/editEtudiant">
                 <div class="modal-body">
-                    <input name="id" value="<jsp:getProperty name="etudiant" property="id"/>" hidden></input>
+                    <input name="id" value="<jsp:getProperty name="etudiant" property="id"/>" type="hidden">
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="groupe">Groupe :</label>
                         <div class="col-sm-3">
@@ -53,8 +52,10 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-default">Confirmer</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                    <button type="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-save"></span> Confirmer
+                    </button>
                 </div>
             </form>
         </div>

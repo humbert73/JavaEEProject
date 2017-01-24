@@ -99,10 +99,24 @@ public class Controleur extends HttpServlet {
             doEditEtudiant(request, response);
         } else if (methode.equals("post") && action.equals("/addNote")) {
             doAddNote(request, response);
+        } else if (methode.equals("post") && action.equals("/editNote")) {
+            doEditNote(request, response);
         } else {
             // Autres cas
             doListe(request, response);
         }
+    }
+
+    private void doEditNote(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        Note note = NoteDAO.getNoteById(Integer.parseInt(request.getParameter("noteId")));
+        note.setValue(Integer.parseInt(request.getParameter("note")));
+        NoteDAO.update(note);
+
+        request.setAttribute("id", request.getParameter("id"));
+
+        this.doDetails(request, response);
     }
 
     private void doAddNote(HttpServletRequest request, HttpServletResponse response)
@@ -203,9 +217,7 @@ public class Controleur extends HttpServlet {
         }
 
         request.setAttribute("etudiant", etudiant);
-        request.setAttribute("groupe", etudiant.getGroupe());
         request.setAttribute("groupes", groupes);
-        request.setAttribute("nbAbsences", etudiant.getNbAbsences());
 
         // Méthode qui transfère le contrôle à une autre servlet
         loadJSP(urlDetails, request, response);

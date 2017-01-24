@@ -58,4 +58,13 @@ public class NoteDAO {
 
 		return note;
 	}
+
+	public static Note getNoteById(int id) {
+		EntityManager em = GestionFactory.factory.createEntityManager();
+		Note note = em.find(Note.class, id);
+
+		em.close();
+
+		return note;
+	}
 }

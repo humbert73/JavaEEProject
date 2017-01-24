@@ -2,22 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ed2a3e9-fbeb-45f7-89f6-780650db5e83" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/note/add.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/note/edit.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/data/database" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/projetSIL4_Web_exploded/WEB-INF/JSP/modals/editEtudiant.jsp" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/editEtudiant.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/etudiant/edit.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/data/database" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/data/database" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/projetSIL4_Web_exploded/WEB-INF/data/database" afterPath="$PROJECT_DIR$/out/artifacts/projetSIL4_Web_exploded/WEB-INF/data/database" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/JSP/details.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/JSP/details.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/WebContent/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/etudiant/edit.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/etudiant/edit.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/note/add.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/note/add.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/note/edit.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/note/edit.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/projetSIL4_Web_exploded/WEB-INF/JSP/details.jsp" afterPath="$PROJECT_DIR$/out/artifacts/projetSIL4_Web_exploded/WEB-INF/JSP/details.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/projetSIL4_Web_exploded/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/out/artifacts/projetSIL4_Web_exploded/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetSIL4.iml" afterPath="$PROJECT_DIR$/projetSIL4.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/projetSIL4_Web_exploded/WEB-INF/JSP/modals/etudiant/edit.jsp" afterPath="$PROJECT_DIR$/out/artifacts/projetSIL4_Web_exploded/WEB-INF/JSP/modals/etudiant/edit.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/projetSIL4_Web_exploded/WEB-INF/JSP/modals/note/add.jsp" afterPath="$PROJECT_DIR$/out/artifacts/projetSIL4_Web_exploded/WEB-INF/JSP/modals/note/add.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controleur/Controleur.java" afterPath="$PROJECT_DIR$/src/controleur/Controleur.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/DAO/EtudiantDAO.java" afterPath="$PROJECT_DIR$/src/util/DAO/EtudiantDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/entities/Etudiant.java" afterPath="$PROJECT_DIR$/src/util/entities/Etudiant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/entities/Note.java" afterPath="$PROJECT_DIR$/src/util/entities/Note.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/DAO/NoteDAO.java" afterPath="$PROJECT_DIR$/src/util/DAO/NoteDAO.java" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,8 +31,8 @@
       <file leaf-file-name="Controleur.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controleur/Controleur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="115" column="47" lean-forward="true" selection-start-line="115" selection-start-column="47" selection-end-line="115" selection-end-column="47" />
+            <state relative-caret-position="238">
+              <caret line="112" column="85" lean-forward="false" selection-start-line="112" selection-start-column="79" selection-end-line="112" selection-end-column="85" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,8 +43,8 @@
       <file leaf-file-name="edit.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/note/edit.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="220">
+              <caret line="25" column="66" lean-forward="true" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -58,8 +53,8 @@
       <file leaf-file-name="NoteDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/DAO/NoteDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+            <state relative-caret-position="175">
+              <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -68,7 +63,7 @@
       <file leaf-file-name="Note.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/entities/Note.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
+            <state relative-caret-position="216">
               <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
               <folding>
                 <element signature="e#882#883#0" expanded="true" />
@@ -91,8 +86,8 @@
       <file leaf-file-name="details.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/details.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="74" column="118" lean-forward="false" selection-start-line="74" selection-start-column="115" selection-end-line="74" selection-end-column="118" />
+            <state relative-caret-position="170">
+              <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="112" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -101,8 +96,8 @@
       <file leaf-file-name="add.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/note/add.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="18" column="118" lean-forward="false" selection-start-line="18" selection-start-column="111" selection-end-line="18" selection-end-column="118" />
+            <state relative-caret-position="306">
+              <caret line="29" column="64" lean-forward="false" selection-start-line="29" selection-start-column="64" selection-end-line="29" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -111,8 +106,8 @@
       <file leaf-file-name="EtudiantDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/DAO/EtudiantDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="134" column="36" lean-forward="true" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="36" />
+            <state relative-caret-position="169">
+              <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="128" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -121,7 +116,7 @@
       <file leaf-file-name="Etudiant.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/entities/Etudiant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
+            <state relative-caret-position="-461">
               <caret line="31" column="33" lean-forward="false" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
               <folding>
                 <element signature="e#1257#1258#0" expanded="true" />
@@ -134,8 +129,8 @@
       <file leaf-file-name="edit.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/etudiant/edit.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="49" column="74" lean-forward="false" selection-start-line="49" selection-start-column="74" selection-end-line="49" selection-end-column="86" />
+            <state relative-caret-position="234">
+              <caret line="55" column="64" lean-forward="false" selection-start-line="55" selection-start-column="64" selection-end-line="55" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -156,13 +151,15 @@
       <list>
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/editEtudiant.jsp" />
         <option value="$PROJECT_DIR$/WebContent/css/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/etudiant/edit.jsp" />
-        <option value="$PROJECT_DIR$/WebContent/WEB-INF/JSP/details.jsp" />
-        <option value="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/note/add.jsp" />
         <option value="$PROJECT_DIR$/src/util/DAO/EtudiantDAO.java" />
         <option value="$PROJECT_DIR$/src/util/entities/Etudiant.java" />
         <option value="$PROJECT_DIR$/src/util/entities/Note.java" />
+        <option value="$PROJECT_DIR$/src/util/DAO/NoteDAO.java" />
         <option value="$PROJECT_DIR$/src/controleur/Controleur.java" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/JSP/details.jsp" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/note/edit.jsp" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/etudiant/edit.jsp" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/note/add.jsp" />
       </list>
     </option>
   </component>
@@ -1012,12 +1009,12 @@
       <option name="presentableId" value="Default" />
       <updated>1485175649080</updated>
       <workItem from="1485175662738" duration="5259000" />
-      <workItem from="1485241298691" duration="3525000" />
+      <workItem from="1485241298691" duration="6999000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8784000" />
+    <option name="totallyTimeSpent" value="12258000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="40" y="18" width="1326" height="750" extended-state="6" />
@@ -1203,33 +1200,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/etudiant/edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="49" column="74" lean-forward="false" selection-start-line="49" selection-start-column="74" selection-end-line="49" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/details.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="74" column="118" lean-forward="false" selection-start-line="74" selection-start-column="115" selection-end-line="74" selection-end-column="118" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/DAO/EtudiantDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="134" column="36" lean-forward="true" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/util/entities/Etudiant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
+        <state relative-caret-position="-461">
           <caret line="31" column="33" lean-forward="false" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
           <folding>
             <element signature="e#1257#1258#0" expanded="true" />
@@ -1238,9 +1211,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/DAO/EtudiantDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="128" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/util/entities/Note.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
+        <state relative-caret-position="216">
           <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
           <folding>
             <element signature="e#882#883#0" expanded="true" />
@@ -1249,36 +1230,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/DAO/NoteDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controleur/Controleur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="115" column="47" lean-forward="true" selection-start-line="115" selection-start-column="47" selection-end-line="115" selection-end-column="47" />
+        <state relative-caret-position="238">
+          <caret line="112" column="85" lean-forward="false" selection-start-line="112" selection-start-column="79" selection-end-line="112" selection-end-column="85" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/details.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="112" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/DAO/NoteDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/etudiant/edit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="55" column="64" lean-forward="false" selection-start-line="55" selection-start-column="64" selection-end-line="55" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/note/add.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="18" column="118" lean-forward="false" selection-start-line="18" selection-start-column="111" selection-end-line="18" selection-end-column="118" />
+        <state relative-caret-position="306">
+          <caret line="29" column="64" lean-forward="false" selection-start-line="29" selection-start-column="64" selection-end-line="29" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/note/edit.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="220">
+          <caret line="25" column="66" lean-forward="true" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
           <folding />
         </state>
       </provider>
