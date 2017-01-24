@@ -17,7 +17,7 @@
             </div>
             <form class="form-horizontal" method="post" action="<%= getServletContext().getContextPath() %>/do/addNote">
                 <div class="modal-body">
-                    <input name="id" value="<jsp:getProperty name="etudiant" property="id"/>" hidden>
+                    <input name="id" value="<jsp:getProperty name="etudiant" property="id"/>" type="hidden">
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="note">Note :</label>
                         <div class="col-sm-3">
@@ -27,7 +27,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
-                    <button type="submit" class="btn btn-default">
+                    <button type="submit" class="btn btn-primary">
                         <span class="glyphicon glyphicon-plus"></span> Ajouter
                     </button>
                 </div>

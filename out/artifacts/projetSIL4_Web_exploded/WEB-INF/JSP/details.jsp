@@ -57,12 +57,12 @@
         </table>
     </div>
     <div class="container-fluid">
-        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-note-add">
-            <span class="glyphicon glyphicon-plus"></span> Ajouter une note
-        </button>
-        <jsp:include page="modals/note/add.jsp" />
         <table class="table">
             <legend>Notes</legend>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-note-add">
+                <span class="glyphicon glyphicon-plus"></span> Ajouter une note
+            </button>
+            <jsp:include page="modals/note/add.jsp" />
             <thead>
             <tr>
                 <th></th>
@@ -89,8 +89,8 @@
                                 </div>
                                 <form class="form-horizontal" method="post" action="<%= getServletContext().getContextPath() %>/do/editNote">
                                     <div class="modal-body">
-                                        <input name="id" value="<jsp:getProperty name="etudiant" property="id"/>" hidden>
-                                        <input name="noteId" value="<%= note.getId() %>" hidden>
+                                        <input name="id" value="<jsp:getProperty name="etudiant" property="id"/>" type="hidden">
+                                        <input name="noteId" value="<%= note.getId() %>" type="hidden">
                                         noteId
                                         <div class="form-group">
                                             <label class="control-label col-sm-4" for="note">Note :</label>
