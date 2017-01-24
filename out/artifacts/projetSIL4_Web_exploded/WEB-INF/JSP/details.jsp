@@ -29,7 +29,8 @@
     </h1>
     <hr>
     <div class="container-fluid">
-        <table class="table" id="table-liste-etudiants">
+        <table class="table">
+            <legend>Détails</legend>
             <thead>
             <tr>
                 <th>Nom</th>
@@ -46,10 +47,35 @@
                 <td><%= etudiant.getGroupe().getLibelle() %></td>
                 <td><%= nbAbsences %></td>
                 <td>
-                    <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#modal-edit">Editer</button>
-                    <jsp:include page="modals/editEtudiant.jsp"/>
+                    <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#modal-etudiant-edit">Editer</button>
+                    <jsp:include page="modals/etudiant/edit.jsp" />
                 </td>
             </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container-fluid">
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-note-add">
+            <span class="glyphicon glyphicon-plus"></span> Ajouter une note
+        </button>
+        <jsp:include page="modals/note/add.jsp" />
+        <table class="table">
+            <legend>Notes</legend>
+            <thead>
+            <tr>
+                <th></th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% for (Note note : etudiant.getNotes()) { %>
+            <tr>
+                <td><%= note.getValue() %></td>
+                <td>
+                    <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#modal-note-add">Editer</button>
+                </td>
+            </tr>
+            <% } %>
             </tbody>
         </table>
     </div>

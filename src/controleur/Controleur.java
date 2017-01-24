@@ -12,9 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import util.DAO.EtudiantDAO;
 import util.DAO.GroupeDAO;
+import util.DAO.NoteDAO;
 import util.GestionFactory;
 import util.entities.Etudiant;
 import util.entities.Groupe;
+import util.entities.Note;
 
 
 @SuppressWarnings("serial")
@@ -95,11 +97,27 @@ public class Controleur extends HttpServlet {
             doAddEtudiant(request, response);
         } else if (methode.equals("post") && action.equals("/editEtudiant")) {
             doEditEtudiant(request, response);
+        } else if (methode.equals("post") && action.equals("/addNote")) {
+            doAddNote(request, response);
         } else {
             // Autres cas
             doListe(request, response);
         }
     }
+
+    private void doAddNote(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+
+        int etudiantId = Integer.parseInt(request.getParameter("id"));
+        int noteValue = Integer.parseInt(request.getParameter("note"));
+        Etudiant etudiant = EtudiantDAO.getEtudiantById(etudiantId);
+
+        NoteDAO.create(noteValue, etudiant);
+        request.setAttribute("id", etudiantId);
+
+        this.doDetails(request, response);
+    }
+
 
     private void doFormAddGroupe(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {

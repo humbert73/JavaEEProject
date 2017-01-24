@@ -4,13 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 
 /**
  * Entity implementation class for Entity: Groupe
@@ -34,7 +28,8 @@ public class Etudiant implements Serializable {
 
 	@Column
 	private int nbAbsences;
-	
+
+	//cascade=CascadeType.PERSIST
 	@OneToMany(mappedBy="etudiant", fetch=FetchType.LAZY)
 	private List<Note> notes;
 

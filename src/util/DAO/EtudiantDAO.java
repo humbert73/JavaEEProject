@@ -4,6 +4,7 @@ package util.DAO;
 import util.entities.Etudiant;
 import util.GestionFactory;
 import util.entities.Groupe;
+import util.entities.Note;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -126,4 +127,19 @@ public class EtudiantDAO {
 
 		return etudiant;
 	}
+
+	public static Etudiant addNote(int etudiantId, Note note) {
+		EntityManager em = GestionFactory.factory.createEntityManager();
+		Etudiant etudiant = em.find(Etudiant.class, etudiantId);
+
+		em.getTransaction().begin();
+		etudiant.addNote(note);
+
+		em.getTransaction().commit();
+		em.close();
+
+		return etudiant;
+	}
+
+
 }

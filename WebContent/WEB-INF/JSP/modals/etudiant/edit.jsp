@@ -7,7 +7,7 @@
 <jsp:useBean id="nbAbsences" type="java.lang.Integer" scope="request"/>
 
 <!-- Modal -->
-<div id="modal-edit" class="modal fade" role="dialog">
+<div id="modal-etudiant-edit" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
         <!-- Modal content-->

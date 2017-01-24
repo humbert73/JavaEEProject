@@ -18,7 +18,7 @@ public class Note implements Serializable {
 	@GeneratedValue
 	private Integer id;
 
-	@Column(nullable=false)
+	@Column()
 	private Integer value;
 
 	@ManyToOne
@@ -31,6 +31,7 @@ public class Note implements Serializable {
 	}
 	
 	public Note(Integer id, Integer value, Etudiant etudiant) {
+		super();
 		this.id = id;
 		this.value = value;
 		this.etudiant = etudiant;
