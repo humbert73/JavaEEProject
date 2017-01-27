@@ -11,12 +11,13 @@ import java.util.List;
 
 public class NoteDAO {
 
-	public static Note create(Integer value, Etudiant etudiant) {
+	public static Note create(Integer value, Integer coefficient, Etudiant etudiant) {
 		EntityManager em = GestionFactory.factory.createEntityManager();
 
 		em.getTransaction().begin();
 		Note note = new Note();
 		note.setValue(value);
+		note.setCoefficient(coefficient);
 		note.setEtudiant(etudiant);
 		em.persist(note);
 		em.getTransaction().commit();

@@ -20,6 +20,13 @@
                                    value="<%= note.getValue() %>">
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="coefficient">Coefficient :</label>
+                        <div class="col-sm-3">
+                            <input type="number" name="coefficient" id="coefficient" class="form-control" min="0" max="20" step="1"
+                                   value="<%= note.getCoefficient() %>">
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>

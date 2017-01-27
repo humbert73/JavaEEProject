@@ -43,8 +43,8 @@
             <tr>
                 <td><jsp:getProperty name="etudiant" property="nom"/></td>
                 <td><jsp:getProperty name="etudiant" property="prenom"/></td>
-                <td><%= etudiant.getGroupe().getLibelle() %></td>
-                <td><jsp:getProperty name="etudiant" property="nbAbsences"/></td>
+                <td><span class="label label-primary"><%= etudiant.getGroupe().getLibelle() %></span></td>
+                <td><span class="badge"><jsp:getProperty name="etudiant" property="nbAbsences"/></span></td>
                 <td>
                     <button type="button" class="btn btn-info btn-xs"
                             data-toggle="modal" data-target="#modal-etudiant-edit">
@@ -59,7 +59,7 @@
     <div class="container-fluid">
         <table class="table">
             <legend>Notes</legend>
-            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-note-add">
+            <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#modal-note-add">
                 <span class="glyphicon glyphicon-plus"></span> Ajouter une note
             </button>
             <jsp:include page="modals/note/add.jsp" />
@@ -72,7 +72,7 @@
             <tbody>
             <% for (Note note : etudiant.getNotes()) { %>
             <tr>
-                <td><%= note.getValue() %></td>
+                <td><%= note.getValue() %>/20 <span class="badge">coef : <%= note.getCoefficient() %></span></td>
                 <td>
                     <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#modal-note-edit-<%= note.getId() %>">
                         <span class="glyphicon glyphicon-pencil"></span> Editer
@@ -94,8 +94,15 @@
                                         <div class="form-group">
                                             <label class="control-label col-sm-4" for="note">Note :</label>
                                             <div class="col-sm-3">
-                                                <input type="number" name="note" id="note" class="form-control" min="0" max="20" step="1"
-                                                       value="<%= note.getValue() %>">
+                                                <input type="number" name="note" id="note" class="form-control"
+                                                       min="0" max="20" step="1" value="<%= note.getValue() %>">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-4" for="note">Coefficient :</label>
+                                            <div class="col-sm-3">
+                                                <input type="number" name="coefficient" id="coefficient" class="form-control"
+                                                       min="0" step="1" value="<%= note.getCoefficient() %>">
                                             </div>
                                         </div>
                                     </div>

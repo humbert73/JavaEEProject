@@ -27,7 +27,7 @@
 			<property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC"/>
 			
 			<!-- Propriétés propre à EclipseLink -->
-			<!-- EclipseLink should create the database schema automatically -->
+			<!-- EclipseLink should create the databasedzq schema automatically -->
       		<property name="eclipselink.ddl-generation" value="create-tables" />
       		<!-- Disable EclipseLink cache - certains enregistrement n'était pas mis à jour en BD -->
       		<property name="eclipselink.cache.shared.default" value="false"/>

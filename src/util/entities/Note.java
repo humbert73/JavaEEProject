@@ -24,6 +24,9 @@ public class Note implements Serializable {
 	@ManyToOne
 	private Etudiant etudiant;
 
+	@Column()
+	private Integer coefficient;
+
 	private static final long serialVersionUID = 1L;
 
 	public Note() {
@@ -59,6 +62,14 @@ public class Note implements Serializable {
 
 	public void setEtudiant(Etudiant etudiant) {
 		this.etudiant = etudiant;
+	}
+
+	public Integer getCoefficient() {
+		return coefficient;
+	}
+
+	public void setCoefficient(Integer coefficient) {
+		this.coefficient = coefficient;
 	}
 
 	

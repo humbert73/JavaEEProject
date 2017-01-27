@@ -112,6 +112,7 @@ public class Controleur extends HttpServlet {
 
         Note note = NoteDAO.getNoteById(Integer.parseInt(request.getParameter("noteId")));
         note.setValue(Integer.parseInt(request.getParameter("note")));
+        note.setCoefficient(Integer.parseInt(request.getParameter("coefficient")));
         NoteDAO.update(note);
 
         request.setAttribute("id", request.getParameter("id"));
@@ -124,9 +125,10 @@ public class Controleur extends HttpServlet {
 
         int etudiantId = Integer.parseInt(request.getParameter("id"));
         int noteValue = Integer.parseInt(request.getParameter("note"));
+        int noteCoefficient = Integer.parseInt(request.getParameter("coefficient"));
         Etudiant etudiant = EtudiantDAO.getEtudiantById(etudiantId);
 
-        NoteDAO.create(noteValue, etudiant);
+        NoteDAO.create(noteValue, noteCoefficient, etudiant);
         request.setAttribute("id", etudiantId);
 
         this.doDetails(request, response);
