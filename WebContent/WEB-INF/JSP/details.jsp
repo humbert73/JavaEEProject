@@ -32,7 +32,7 @@
     <hr>
     <div class="container-fluid">
         <table class="table">
-            <legend>Détails <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#modal-etudiant-edit">
+            <legend>Détails <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#modal-etudiant-edit">
                 <span class="glyphicon glyphicon-pencil"></span> Editer</button>
             </legend>
             <jsp:include page="modals/etudiant/edit.jsp"/>
@@ -53,19 +53,22 @@
             </tr>
             </tbody>
         </table>
-        <div class="container-fluid col-sm-6">
+        <div class="container col-sm-6">
             <table class="table">
-                <legend>Notes <div class="btn-group btn-group-xs">
-                    <button type="button" class="btn btn-xs btn-info" data-toggle="modal" data-target="#modal-note-add">
-                        <span class="glyphicon glyphicon-plus"></span> Ajouter une note
-                    </button>
-                    <button type="button" class="btn btn-xs btn-info" data-toggle="modal"
-                            data-target="#modal-module-add">
-                        <span class="glyphicon glyphicon-plus"></span> Ajouter un module
-                    </button>
-                </div></legend>
+                <legend>Notes</legend>
                 <jsp:include page="modals/note/add.jsp"/>
                 <jsp:include page="modals/module/add.jsp"/>
+                <p><span class="label label-success">Moyenne : <%= etudiant.getAverage() %></span>
+                    <div class="btn-group btn-group-xs">
+                        <button type="button" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal-note-add">
+                            <span class="glyphicon glyphicon-plus"></span> Ajouter une note
+                        </button>
+                        <button type="button" class="btn btn-xs btn-primary" data-toggle="modal"
+                                data-target="#modal-module-add">
+                            <span class="glyphicon glyphicon-plus"></span> Ajouter un module
+                        </button>
+                    </div>
+                </p>
                 <thead>
                 <tr>
                     <th></th>
@@ -74,12 +77,12 @@
                 </thead>
                 <tbody>
                 <% for (Module module : modules) { %>
-                <tr><td><%= module.getLibelle() %></td><td></td></tr>
+                <tr><td><span class="label label-info"><%= module.getLibelle() %></span> <span class="label label-success">Moyenne : <%= etudiant.getAverageByModule(module) %></span></td><td></td></tr>
                     <% for (Note note : etudiant.getNotesByModule(module)) { %>
                         <tr>
                             <td><%= note.getValue() %>/20 <span class="badge">coef : <%= note.getCoefficient() %></span></td>
                             <td>
-                                <button type="button" class="btn btn-info btn-xs" data-toggle="modal"
+                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal"
                                         data-target="#modal-note-edit-<%= note.getId() %>">
                                     <span class="glyphicon glyphicon-pencil"></span> Editer
                                 </button>

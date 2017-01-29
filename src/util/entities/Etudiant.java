@@ -102,13 +102,45 @@ public class Etudiant implements Serializable {
 	}
 
     public List<Note> getNotesByModule(Module module) {
-		List<Note> notes = new ArrayList<>();
-		for (Note note : this.getNotes()) {
-			if (note.getModule().getId().intValue() == module.getId().intValue()) {
-				notes.add(note);
-			}
-		}
+        List<Note> notes = new ArrayList<>();
+        for (Note note : this.getNotes()) {
+            if (note.getModule().getId().intValue() == module.getId().intValue()) {
+                notes.add(note);
+            }
+        }
 
-		return notes;
+        return notes;
+    }
+
+    public int getAverageByModule(Module module) {
+        int average = 0;
+        int diviseur = 0;
+        for (Note note : this.getNotes()) {
+            if (note.getModule().getId().intValue() == module.getId().intValue()) {
+                average += note.getValue() * note.getCoefficient();
+                diviseur += note.getCoefficient();
+            }
+        }
+
+        if (diviseur != 0) {
+            average = average / diviseur;
+        }
+
+        return average;
+    }
+
+    public int getAverage() {
+        int average = 0;
+        int diviseur = 0;
+        for (Note note : this.getNotes()) {
+            average += note.getValue() * note.getCoefficient();
+            diviseur += note.getCoefficient();
+        }
+
+        if (diviseur != 0) {
+            average = average / diviseur;
+        }
+
+        return average;
     }
 }

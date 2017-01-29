@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ed2a3e9-fbeb-45f7-89f6-780650db5e83" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/data/database" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/data/database" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/data/database" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/util/entities/Etudiant.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/projetSIL4_Web_exploded/WEB-INF/data/database" afterPath="$PROJECT_DIR$/out/artifacts/projetSIL4_Web_exploded/WEB-INF/data/database" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/JSP/details.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/JSP/details.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/projetSIL4_Web_exploded/WEB-INF/JSP/details.jsp" afterPath="$PROJECT_DIR$/out/artifacts/projetSIL4_Web_exploded/WEB-INF/JSP/details.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controleur/Controleur.java" afterPath="$PROJECT_DIR$/src/controleur/Controleur.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/DAO/EtudiantDAO.java" afterPath="$PROJECT_DIR$/src/util/DAO/EtudiantDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/DAO/NoteDAO.java" afterPath="$PROJECT_DIR$/src/util/DAO/NoteDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/entities/Etudiant.java" afterPath="$PROJECT_DIR$/src/util/entities/Etudiant.java" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
@@ -69,21 +68,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="details.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="details.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/details.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+            <state relative-caret-position="171">
+              <caret line="61" column="15" lean-forward="false" selection-start-line="61" selection-start-column="15" selection-end-line="69" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Etudiant.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Etudiant.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/entities/Etudiant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="103" column="55" lean-forward="true" selection-start-line="103" selection-start-column="55" selection-end-line="103" selection-end-column="55" />
+            <state relative-caret-position="300">
+              <caret line="145" column="1" lean-forward="false" selection-start-line="145" selection-start-column="1" selection-end-line="145" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -135,6 +134,7 @@
     <findStrings>
       <find>note</find>
       <find>&lt;button type=&quot;button&quot; class=&quot;btn btn-sm btn-info&quot; data-toggle=&quot;modal&quot;</find>
+      <find>btn</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -161,8 +161,8 @@
         <option value="$PROJECT_DIR$/src/util/DAO/EtudiantDAO.java" />
         <option value="$PROJECT_DIR$/src/util/DAO/NoteDAO.java" />
         <option value="$PROJECT_DIR$/src/controleur/Controleur.java" />
-        <option value="$PROJECT_DIR$/WebContent/WEB-INF/JSP/details.jsp" />
         <option value="$PROJECT_DIR$/src/util/entities/Etudiant.java" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/JSP/details.jsp" />
       </list>
     </option>
   </component>
@@ -356,28 +356,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="etudiant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projetSIL4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projetSIL4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebContent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1078,12 +1056,12 @@
       <workItem from="1485505076235" duration="3542000" />
       <workItem from="1485523082678" duration="4436000" />
       <workItem from="1485614557193" duration="1612000" />
-      <workItem from="1485675108376" duration="7083000" />
+      <workItem from="1485675108376" duration="10125000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29195000" />
+    <option name="totallyTimeSpent" value="32237000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="40" y="18" width="1326" height="750" extended-state="6" />
@@ -1109,7 +1087,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3328424" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21191554" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1482,7 +1460,7 @@
         <state relative-caret-position="702">
           <caret line="44" column="49" lean-forward="false" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1507,14 +1485,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/liste.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1147">
-          <caret line="64" column="29" lean-forward="false" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -1571,18 +1541,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/details.jsp">
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/liste.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+        <state relative-caret-position="1147">
+          <caret line="64" column="29" lean-forward="false" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/util/entities/Etudiant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="103" column="55" lean-forward="true" selection-start-line="103" selection-start-column="55" selection-end-line="103" selection-end-column="55" />
+        <state relative-caret-position="300">
+          <caret line="145" column="1" lean-forward="false" selection-start-line="145" selection-start-column="1" selection-end-line="145" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/details.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="61" column="15" lean-forward="false" selection-start-line="61" selection-start-column="15" selection-end-line="69" selection-end-column="26" />
           <folding />
         </state>
       </provider>
