@@ -8,6 +8,7 @@ import util.entities.Note;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import java.util.Collection;
 import java.util.List;
 
 public class EtudiantDAO {
@@ -140,6 +141,4 @@ public class EtudiantDAO {
 
 		return etudiant;
 	}
-
-
 }

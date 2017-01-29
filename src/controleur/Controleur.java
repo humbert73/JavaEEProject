@@ -2,6 +2,7 @@ package controleur;
 
 import java.io.IOException;
 import java.util.Collection;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -252,8 +253,9 @@ public class Controleur extends HttpServlet {
         }
 
         request.setAttribute("etudiant", etudiant);
-        request.setAttribute("groupes", groupes);
-        request.setAttribute("modules", modules);
+        request.setAttribute("groupes",  groupes);
+        request.setAttribute("modules",  modules);
+
 
         // Méthode qui transfère le contrôle à une autre servlet
         loadJSP(urlDetails, request, response);

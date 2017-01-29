@@ -2,6 +2,7 @@ package util.entities;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import javax.persistence.*;
@@ -99,4 +100,15 @@ public class Etudiant implements Serializable {
 	public void addNote(Note note) {
 		this.notes.add(note);
 	}
+
+    public List<Note> getNotesByModule(Module module) {
+		List<Note> notes = new ArrayList<>();
+		for (Note note : this.getNotes()) {
+			if (note.getModule().getId().intValue() == module.getId().intValue()) {
+				notes.add(note);
+			}
+		}
+
+		return notes;
+    }
 }

@@ -3,6 +3,7 @@
 
 <%-- Directives de page import --%>
 <%@ page import="util.entities.*" %>
+<%@ page import="util.DAO.NoteDAO" %>
 
 <jsp:useBean id="etudiant" class="util.entities.Etudiant" scope="request"/>
 <jsp:useBean id="groupes" type="java.util.Collection<util.entities.Groupe>" scope="request"/>
@@ -31,64 +32,57 @@
     <hr>
     <div class="container-fluid">
         <table class="table">
-            <legend>Détails</legend>
+            <legend>Détails <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#modal-etudiant-edit">
+                <span class="glyphicon glyphicon-pencil"></span> Editer</button>
+            </legend>
+            <jsp:include page="modals/etudiant/edit.jsp"/>
             <thead>
             <tr>
                 <th>Nom</th>
                 <th>Prenom</th>
                 <th>Groupe</th>
                 <th>Nombre d'absences</th>
-                <th>Actions</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td>
-                    <jsp:getProperty name="etudiant" property="nom"/>
-                </td>
-                <td>
-                    <jsp:getProperty name="etudiant" property="prenom"/>
-                </td>
+                <td><jsp:getProperty name="etudiant" property="nom"/></td>
+                <td><jsp:getProperty name="etudiant" property="prenom"/></td>
                 <td><span class="label label-primary"><%= etudiant.getGroupe().getLibelle() %></span></td>
                 <td><span class="badge"><jsp:getProperty name="etudiant" property="nbAbsences"/></span></td>
-                <td>
-                    <button type="button" class="btn btn-info btn-xs"
-                            data-toggle="modal" data-target="#modal-etudiant-edit">
-                        <span class="glyphicon glyphicon-pencil"></span> Editer
-                    </button>
-                    <jsp:include page="modals/etudiant/edit.jsp"/>
-                </td>
             </tr>
             </tbody>
         </table>
-    </div>
-    <div class="container-fluid">
-        <table class="table">
-            <legend>Notes</legend>
-            <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#modal-note-add">
-                <span class="glyphicon glyphicon-plus"></span> Ajouter une note
-            </button>
-            <jsp:include page="modals/note/add.jsp"/>
-            <button type="button" class="btn btn-sm btn-info" data-toggle="modal"
-                    data-target="#modal-module-add">
-                <span class="glyphicon glyphicon-plus"></span> Ajouter un module
-            </button>
-            <jsp:include page="modals/module/add.jsp"/>
-            <thead>
-            <tr>
-                <th></th>
-                <th>Actions</th>
-            </tr>
-            </thead>
-            <tbody>
-            <% for (Note note : etudiant.getNotes()) { %>
-            <tr>
-                <td><%= note.getValue() %>/20 <span class="badge">coef : <%= note.getCoefficient() %></span></td>
-                <td>
-                    <button type="button" class="btn btn-info btn-xs" data-toggle="modal"
-                            data-target="#modal-note-edit-<%= note.getId() %>">
-                        <span class="glyphicon glyphicon-pencil"></span> Editer
+        <div class="container-fluid col-sm-6">
+            <table class="table">
+                <legend>Notes <div class="btn-group btn-group-xs">
+                    <button type="button" class="btn btn-xs btn-info" data-toggle="modal" data-target="#modal-note-add">
+                        <span class="glyphicon glyphicon-plus"></span> Ajouter une note
                     </button>
+                    <button type="button" class="btn btn-xs btn-info" data-toggle="modal"
+                            data-target="#modal-module-add">
+                        <span class="glyphicon glyphicon-plus"></span> Ajouter un module
+                    </button>
+                </div></legend>
+                <jsp:include page="modals/note/add.jsp"/>
+                <jsp:include page="modals/module/add.jsp"/>
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <% for (Module module : modules) { %>
+                <tr><td><%= module.getLibelle() %></td><td></td></tr>
+                    <% for (Note note : etudiant.getNotesByModule(module)) { %>
+                        <tr>
+                            <td><%= note.getValue() %>/20 <span class="badge">coef : <%= note.getCoefficient() %></span></td>
+                            <td>
+                                <button type="button" class="btn btn-info btn-xs" data-toggle="modal"
+                                        data-target="#modal-note-edit-<%= note.getId() %>">
+                                    <span class="glyphicon glyphicon-pencil"></span> Editer
+                                </button>
 <!-- Modal Edit Note -->
 <div id="modal-note-edit-<%= note.getId() %>" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -101,10 +95,8 @@
             </div>
             <form method="post" action="<%= getServletContext().getContextPath() %>/do/editNote">
                 <div class="modal-body form-horizontal">
-                    <input name="id" value="<jsp:getProperty name="etudiant" property="id"/>"
-                           type="hidden">
+                    <input name="id" value="<jsp:getProperty name="etudiant" property="id"/>" type="hidden">
                     <input name="noteId" value="<%= note.getId() %>" type="hidden">
-
                     <input name="noteId" value="<%= note.getModule() %>" type="hidden">
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="module">Module :</label>
@@ -113,9 +105,8 @@
                                 <option selected="selected" value="<%= note.getModule().getId() %>">
                                     <%= note.getModule().getLibelle() %>
                                 </option>
-                                <% for (Module module : modules) { %>
-                                <option value="<%= module.getId() %>"><%= module.getLibelle() %>
-                                </option>
+                                <% for (Module moduleModal : modules) { %>
+                                    <option value="<%= moduleModal.getId() %>"><%= moduleModal.getLibelle() %></option>
                                 <% } %>
                             </select>
                         </div>
@@ -148,11 +139,13 @@
     </div>
 </div>
 <!-- Fin modal note edit -->
-                </td>
-            </tr>
-            <% } %>
-            </tbody>
-        </table>
+                            </td>
+                        </tr>
+                        <% } %>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 </body>
