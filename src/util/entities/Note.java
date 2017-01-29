@@ -24,6 +24,9 @@ public class Note implements Serializable {
 	@ManyToOne
 	private Etudiant etudiant;
 
+	@ManyToOne
+	private Module module;
+
 	@Column()
 	private Integer coefficient;
 
@@ -33,11 +36,12 @@ public class Note implements Serializable {
 		super();
 	}
 	
-	public Note(Integer id, Integer value, Etudiant etudiant) {
+	public Note(Integer id, Integer value, Etudiant etudiant, Module module) {
 		super();
 		this.id = id;
 		this.value = value;
 		this.etudiant = etudiant;
+		this.module = module;
 	}
 
 	public Integer getId() {
@@ -72,5 +76,11 @@ public class Note implements Serializable {
 		this.coefficient = coefficient;
 	}
 
-	
+    public Module getModule() {
+        return module;
+    }
+
+    public void setModule(Module module) {
+        this.module = module;
+    }
 }

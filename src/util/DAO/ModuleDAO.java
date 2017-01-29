@@ -2,30 +2,25 @@ package util.DAO;
 
 
 import util.GestionFactory;
-import util.entities.Etudiant;
 import util.entities.Module;
-import util.entities.Note;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import java.util.List;
 
-public class NoteDAO {
+public class ModuleDAO {
 
-	public static Note create(Integer value, Integer coefficient, Etudiant etudiant, Module module) {
+	public static Module create(String libelle) {
 		EntityManager em = GestionFactory.factory.createEntityManager();
 
 		em.getTransaction().begin();
-		Note note = new Note();
-		note.setValue(value);
-		note.setCoefficient(coefficient);
-		note.setEtudiant(etudiant);
-		note.setModule(module);
-		em.persist(note);
+		Module module = new Module();
+		module.setLibelle(libelle);
+		em.persist(module);
 		em.getTransaction().commit();
 		em.close();
 		
-		return note;
+		return module;
 	}
 	
 	
@@ -33,7 +28,7 @@ public class NoteDAO {
 		EntityManager em = GestionFactory.factory.createEntityManager();
 
 		em.getTransaction().begin();
-		int deletedCount = em.createQuery("DELETE FROM Note").executeUpdate();
+		int deletedCount = em.createQuery("DELETE FROM Module").executeUpdate();
 		em.getTransaction().commit();
 		em.close();
 		
@@ -42,32 +37,32 @@ public class NoteDAO {
 	
 	
 	
-	public static List<Note> getAll() {
+	public static List<Module> getAll() {
 		EntityManager em = GestionFactory.factory.createEntityManager();
 
-		Query q = em.createQuery("SELECT n FROM Note n");
+		Query q = em.createQuery("SELECT m FROM Module m");
 		@SuppressWarnings("unchecked")
-		List<Note> notes = q.getResultList();
+		List<Module> modules = q.getResultList();
 		
-		return notes;
+		return modules;
 	}
 
-	public static Note update(Note note) {
+	public static Module update(Module module) {
 		EntityManager em = GestionFactory.factory.createEntityManager();
 		em.getTransaction().begin();
-		em.merge(note);
+		em.merge(module);
 		em.getTransaction().commit();
 		em.close();
 
-		return note;
+		return module;
 	}
 
-	public static Note getNoteById(int id) {
+	public static Module getModuleById(int id) {
 		EntityManager em = GestionFactory.factory.createEntityManager();
-		Note note = em.find(Note.class, id);
+		Module module = em.find(Module.class, id);
 
 		em.close();
 
-		return note;
+		return module;
 	}
 }

@@ -15,9 +15,9 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Edition d'un étudiant</h4>
             </div>
-            <form class="form-horizontal" method="post" action="<%= getServletContext().getContextPath() %>/do/editEtudiant">
-                <div class="modal-body">
-                    <input name="id" value="<jsp:getProperty name="etudiant" property="id"/>" hidden>
+            <form method="post" action="<%= getServletContext().getContextPath() %>/do/editEtudiant">
+                <div class="modal-body form-horizontal">
+                    <input name="id" value="<jsp:getProperty name="etudiant" property="id"/>" type="hidden">
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="groupe">Groupe :</label>
                         <div class="col-sm-3">
@@ -53,7 +53,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
-                    <button type="submit" class="btn btn-default">
+                    <button type="submit" class="btn btn-primary">
                         <span class="glyphicon glyphicon-save"></span> Confirmer
                     </button>
                 </div>

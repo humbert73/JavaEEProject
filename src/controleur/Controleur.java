@@ -12,10 +12,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import util.DAO.EtudiantDAO;
 import util.DAO.GroupeDAO;
+import util.DAO.ModuleDAO;
 import util.DAO.NoteDAO;
 import util.GestionFactory;
 import util.entities.Etudiant;
 import util.entities.Groupe;
+import util.entities.Module;
 import util.entities.Note;
 
 
@@ -101,18 +103,46 @@ public class Controleur extends HttpServlet {
             doAddNote(request, response);
         } else if (methode.equals("post") && action.equals("/editNote")) {
             doEditNote(request, response);
+        } else if (methode.equals("post") && action.equals("/addModule")) {
+            doAddModule(request, response);
+        } else if (methode.equals("post") && action.equals("/editModule")) {
+            doEditModule(request, response);
         } else {
             // Autres cas
             doListe(request, response);
         }
     }
 
+    private void doEditModule(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        Module module = ModuleDAO.getModuleById(Integer.parseInt(request.getParameter("moduleId")));
+        module.setLibelle(request.getParameter("libelle"));
+        ModuleDAO.update(module);
+
+        request.setAttribute("id", request.getParameter("id"));
+
+        this.doDetails(request, response);
+    }
+
+    private void doAddModule(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        ModuleDAO.create(request.getParameter("module-libelle"));
+        request.setAttribute("id", request.getParameter("id"));
+
+        this.doDetails(request, response);
+    }
+
     private void doEditNote(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         Note note = NoteDAO.getNoteById(Integer.parseInt(request.getParameter("noteId")));
+        Module module = ModuleDAO.getModuleById(Integer.parseInt(request.getParameter("module-id")));
+
         note.setValue(Integer.parseInt(request.getParameter("note")));
         note.setCoefficient(Integer.parseInt(request.getParameter("coefficient")));
+        note.setModule(module);
         NoteDAO.update(note);
 
         request.setAttribute("id", request.getParameter("id"));
@@ -123,12 +153,14 @@ public class Controleur extends HttpServlet {
     private void doAddNote(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
 
-        int etudiantId = Integer.parseInt(request.getParameter("id"));
-        int noteValue = Integer.parseInt(request.getParameter("note"));
+        int etudiantId      = Integer.parseInt(request.getParameter("id"));
+        int noteValue       = Integer.parseInt(request.getParameter("note"));
+        int moduleId        = Integer.parseInt(request.getParameter("module-id"));
         int noteCoefficient = Integer.parseInt(request.getParameter("coefficient"));
-        Etudiant etudiant = EtudiantDAO.getEtudiantById(etudiantId);
+        Etudiant etudiant   = EtudiantDAO.getEtudiantById(etudiantId);
+        Module module = ModuleDAO.getModuleById(moduleId);
 
-        NoteDAO.create(noteValue, noteCoefficient, etudiant);
+        NoteDAO.create(noteValue, noteCoefficient, etudiant, module);
         request.setAttribute("id", etudiantId);
 
         this.doDetails(request, response);
@@ -213,6 +245,7 @@ public class Controleur extends HttpServlet {
 
         Etudiant etudiant = EtudiantDAO.getEtudiantById(id);
         Collection<Groupe> groupes = GroupeDAO.getAll();
+        Collection<Module> modules = ModuleDAO.getAll();
 
         if (etudiant == null) {
             etudiant = new Etudiant();
@@ -220,6 +253,7 @@ public class Controleur extends HttpServlet {
 
         request.setAttribute("etudiant", etudiant);
         request.setAttribute("groupes", groupes);
+        request.setAttribute("modules", modules);
 
         // Méthode qui transfère le contrôle à une autre servlet
         loadJSP(urlDetails, request, response);
