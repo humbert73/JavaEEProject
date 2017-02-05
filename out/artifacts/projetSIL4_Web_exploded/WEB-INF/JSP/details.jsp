@@ -29,6 +29,8 @@
         <jsp:getProperty name="etudiant" property="prenom"/>
         <jsp:getProperty name="etudiant" property="nom"/>
     </h1>
+    <a href="<%= getServletContext().getContextPath() %>/do/liste" class="btn btn-primary">
+        <span class="glyphicon glyphicon-arrow-left"></span> Retour à la liste des étudiants</a>
     <hr>
     <div class="container-fluid">
         <table class="table">

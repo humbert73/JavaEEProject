@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ed2a3e9-fbeb-45f7-89f6-780650db5e83" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/data/database" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/util/entities/Etudiant.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/tags/layout.tag" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/projetSIL4_Web_exploded/WEB-INF/data/database" afterPath="$PROJECT_DIR$/out/artifacts/projetSIL4_Web_exploded/WEB-INF/data/database" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/JSP/details.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/JSP/details.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/JSP/liste.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/JSP/liste.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/projetSIL4_Web_exploded/WEB-INF/JSP/details.jsp" afterPath="$PROJECT_DIR$/out/artifacts/projetSIL4_Web_exploded/WEB-INF/JSP/details.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/entities/Etudiant.java" afterPath="$PROJECT_DIR$/src/util/entities/Etudiant.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/projetSIL4_Web_exploded/WEB-INF/JSP/liste.jsp" afterPath="$PROJECT_DIR$/out/artifacts/projetSIL4_Web_exploded/WEB-INF/JSP/liste.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,7 +27,7 @@
       <file leaf-file-name="Controleur.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controleur/Controleur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11">
+            <state relative-caret-position="4266">
               <caret line="256" column="50" lean-forward="false" selection-start-line="256" selection-start-column="50" selection-end-line="256" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -39,7 +39,7 @@
       <file leaf-file-name="NoteDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/DAO/NoteDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
+            <state relative-caret-position="1152">
               <caret line="72" column="5" lean-forward="false" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
               <folding />
             </state>
@@ -49,7 +49,7 @@
       <file leaf-file-name="Note.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/entities/Note.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
+            <state relative-caret-position="1026">
               <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
               <folding>
                 <element signature="e#1243#1244#0" expanded="true" />
@@ -61,18 +61,28 @@
       <file leaf-file-name="EtudiantDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/DAO/EtudiantDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
+            <state relative-caret-position="2412">
               <caret line="142" column="5" lean-forward="false" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="details.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="details.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/details.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="61" column="15" lean-forward="false" selection-start-line="61" selection-start-column="15" selection-end-line="69" selection-end-column="26" />
+            <state relative-caret-position="288">
+              <caret line="52" column="101" lean-forward="false" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="101" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.tag" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/tags/layout.tag">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="33" column="17" lean-forward="false" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -81,48 +91,38 @@
       <file leaf-file-name="Etudiant.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/entities/Etudiant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
+            <state relative-caret-position="290">
               <caret line="145" column="1" lean-forward="false" selection-start-line="145" selection-start-column="1" selection-end-line="145" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="liste.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="liste.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/liste.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1147">
-              <caret line="64" column="29" lean-forward="false" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
+            <state relative-caret-position="72">
+              <caret line="61" column="73" lean-forward="false" selection-start-line="61" selection-start-column="73" selection-end-line="61" selection-end-column="73" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="listeGroupe.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/listeGroupe.jsp">
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="62" column="17" lean-forward="true" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="add.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/module/add.jsp">
+        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/note/add.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/etudiant/edit.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+            <state relative-caret-position="36">
+              <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -135,6 +135,7 @@
       <find>note</find>
       <find>&lt;button type=&quot;button&quot; class=&quot;btn btn-sm btn-info&quot; data-toggle=&quot;modal&quot;</find>
       <find>btn</find>
+      <find>group-btn</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -155,14 +156,17 @@
         <option value="$PROJECT_DIR$/src/util/entities/Note.java" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/classes/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/util/DAO/ModuleDAO.java" />
-        <option value="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/note/add.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/module/add.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/etudiant/edit.jsp" />
         <option value="$PROJECT_DIR$/src/util/DAO/EtudiantDAO.java" />
         <option value="$PROJECT_DIR$/src/util/DAO/NoteDAO.java" />
         <option value="$PROJECT_DIR$/src/controleur/Controleur.java" />
         <option value="$PROJECT_DIR$/src/util/entities/Etudiant.java" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/note/add.jsp" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/JSP/layout.jsp" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/tags/layout.tag" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/JSP/details.jsp" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/JSP/liste.jsp" />
       </list>
     </option>
   </component>
@@ -200,8 +204,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -244,6 +246,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projetSIL4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projetSIL4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebContent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tags" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -539,6 +563,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -553,20 +579,22 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/WebContent/WEB-INF/data" />
-      <recent name="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/module" />
-      <recent name="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/note" />
-      <recent name="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/WebContent/WEB-INF" />
+      <recent name="$PROJECT_DIR$/WebContent/WEB-INF/JSP/tags" />
+      <recent name="$PROJECT_DIR$/WebContent/WEB-INF/JSP" />
+      <recent name="$PROJECT_DIR$/WebContent/WEB-INF/tags" />
+      <recent name="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/etudiant" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="util.DAO" />
       <recent name="util.entities" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/etudiant" />
-      <recent name="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/edit" />
-      <recent name="$PROJECT_DIR$/WebContent" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/WebContent/WEB-INF/data" />
+      <recent name="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/module" />
+      <recent name="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/note" />
+      <recent name="$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Unnamed">
@@ -1056,12 +1084,14 @@
       <workItem from="1485505076235" duration="3542000" />
       <workItem from="1485523082678" duration="4436000" />
       <workItem from="1485614557193" duration="1612000" />
-      <workItem from="1485675108376" duration="10125000" />
+      <workItem from="1485675108376" duration="11599000" />
+      <workItem from="1486280342488" duration="163000" />
+      <workItem from="1486280649071" duration="1831000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32237000" />
+    <option name="totallyTimeSpent" value="35705000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="40" y="18" width="1326" height="750" extended-state="6" />
@@ -1119,22 +1149,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/util/DAO/EtudiantDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2034">
-          <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="128" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/etudiant/edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="55" column="64" lean-forward="false" selection-start-line="55" selection-start-column="64" selection-end-line="55" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controleur/Controleur.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1728">
@@ -1158,7 +1172,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="36" column="33" lean-forward="false" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-          <folding />
+          <folding>
+            <element signature="e#1243#1244#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1190,35 +1206,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
           <caret line="31" column="33" lean-forward="false" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#678#679#0" expanded="false" />
-            <element signature="e#692#693#0" expanded="false" />
-            <element signature="e#908#909#0" expanded="false" />
-            <element signature="e#924#925#0" expanded="false" />
-            <element signature="e#958#959#0" expanded="false" />
-            <element signature="e#977#978#0" expanded="false" />
-            <element signature="e#1007#1008#0" expanded="false" />
-            <element signature="e#1027#1028#0" expanded="false" />
-            <element signature="e#1068#1069#0" expanded="false" />
-            <element signature="e#1095#1096#0" expanded="false" />
-            <element signature="e#1122#1123#0" expanded="false" />
-            <element signature="e#1139#1140#0" expanded="false" />
-            <element signature="e#1174#1175#0" expanded="false" />
-            <element signature="e#1195#1196#0" expanded="false" />
-            <element signature="e#1225#1226#0" expanded="false" />
-            <element signature="e#1245#1246#0" expanded="false" />
-            <element signature="e#1344#1345#0" expanded="false" />
-            <element signature="e#1368#1369#0" expanded="false" />
-            <element signature="e#1414#1415#0" expanded="false" />
-            <element signature="e#1449#1450#0" expanded="false" />
-            <element signature="e#1482#1483#0" expanded="false" />
-            <element signature="e#1501#1502#0" expanded="false" />
-            <element signature="e#1544#1545#0" expanded="false" />
-            <element signature="e#1569#1570#0" expanded="false" />
-            <element signature="e#1604#1605#0" expanded="false" />
-            <element signature="e#1631#1632#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1253,7 +1241,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-          <folding />
+          <folding>
+            <element signature="e#1243#1244#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1293,35 +1283,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="31" column="33" lean-forward="false" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#678#679#0" expanded="false" />
-            <element signature="e#692#693#0" expanded="false" />
-            <element signature="e#908#909#0" expanded="false" />
-            <element signature="e#924#925#0" expanded="false" />
-            <element signature="e#958#959#0" expanded="false" />
-            <element signature="e#977#978#0" expanded="false" />
-            <element signature="e#1007#1008#0" expanded="false" />
-            <element signature="e#1027#1028#0" expanded="false" />
-            <element signature="e#1068#1069#0" expanded="false" />
-            <element signature="e#1095#1096#0" expanded="false" />
-            <element signature="e#1122#1123#0" expanded="false" />
-            <element signature="e#1139#1140#0" expanded="false" />
-            <element signature="e#1174#1175#0" expanded="false" />
-            <element signature="e#1195#1196#0" expanded="false" />
-            <element signature="e#1225#1226#0" expanded="false" />
-            <element signature="e#1245#1246#0" expanded="false" />
-            <element signature="e#1344#1345#0" expanded="false" />
-            <element signature="e#1368#1369#0" expanded="false" />
-            <element signature="e#1414#1415#0" expanded="false" />
-            <element signature="e#1449#1450#0" expanded="false" />
-            <element signature="e#1482#1483#0" expanded="false" />
-            <element signature="e#1501#1502#0" expanded="false" />
-            <element signature="e#1544#1545#0" expanded="false" />
-            <element signature="e#1569#1570#0" expanded="false" />
-            <element signature="e#1604#1605#0" expanded="false" />
-            <element signature="e#1631#1632#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1394,7 +1356,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="799" lean-forward="true" selection-start-line="4" selection-start-column="799" selection-end-line="4" selection-end-column="799" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1433,7 +1394,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="799" lean-forward="false" selection-start-line="4" selection-start-column="799" selection-end-line="4" selection-end-column="799" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1473,14 +1433,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/note/add.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="20" column="54" lean-forward="false" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/module/add.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -1507,7 +1459,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/util/DAO/EtudiantDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
+        <state relative-caret-position="2412">
           <caret line="142" column="5" lean-forward="false" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
           <folding />
         </state>
@@ -1515,7 +1467,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/util/DAO/NoteDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
+        <state relative-caret-position="1152">
           <caret line="72" column="5" lean-forward="false" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
           <folding />
         </state>
@@ -1523,7 +1475,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controleur/Controleur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
+        <state relative-caret-position="4266">
           <caret line="256" column="50" lean-forward="false" selection-start-line="256" selection-start-column="50" selection-end-line="256" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1533,7 +1485,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/util/entities/Note.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
+        <state relative-caret-position="1026">
           <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
           <folding>
             <element signature="e#1243#1244#0" expanded="true" />
@@ -1541,17 +1493,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/liste.jsp">
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/modals/note/add.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1147">
-          <caret line="64" column="29" lean-forward="false" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
+        <state relative-caret-position="36">
+          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/tags/layout.tag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" column="17" lean-forward="false" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/util/entities/Etudiant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="290">
           <caret line="145" column="1" lean-forward="false" selection-start-line="145" selection-start-column="1" selection-end-line="145" selection-end-column="1" />
           <folding />
         </state>
@@ -1559,8 +1527,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/details.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="61" column="15" lean-forward="false" selection-start-line="61" selection-start-column="15" selection-end-line="69" selection-end-column="26" />
+        <state relative-caret-position="288">
+          <caret line="52" column="101" lean-forward="false" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/JSP/liste.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="61" column="73" lean-forward="false" selection-start-line="61" selection-start-column="73" selection-end-line="61" selection-end-column="73" />
           <folding />
         </state>
       </provider>

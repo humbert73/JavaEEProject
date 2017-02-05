@@ -25,23 +25,28 @@
 <body>
 <div class="container-fluid">
     <h1>Liste des étudiants</h1>
-    <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Groupes
-            <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-            <% for (Groupe groupe : groupes) { %>
-            <li>
-                <a href="<%= getServletContext().getContextPath() %>/do/listGroupe?libelle=<%= groupe.getLibelle() %>">
-                    <%= groupe.getLibelle() %>
-                </a>
-            </li>
-            <% } %>
-            <li class="divider"></li>
-            <li><a href="<%= getServletContext().getContextPath() %>/do/formAddGroupe">Ajouter un Groupe</a>
-        </ul>
-    </div>
-    <div class="container">
-        <a href="<%= getServletContext().getContextPath() %>/do/formAddEtudiant" type="button" class="btn btn-xs btn-default">Ajouter un étudiant</a>
+    <div class="row">
+        <div class="col-sm-2">
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Groupes
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <% for (Groupe groupe : groupes) { %>
+                <li>
+                    <a href="<%= getServletContext().getContextPath() %>/do/listGroupe?libelle=<%= groupe.getLibelle() %>">
+                        <%= groupe.getLibelle() %>
+                    </a>
+                </li>
+                <% } %>
+                <li class="divider"></li>
+                <li><a href="<%= getServletContext().getContextPath() %>/do/formAddGroupe">Ajouter un Groupe</a>
+            </ul>
+        </div>
+        </div>
+        <div class="col-sm-2">
+            <a href="<%= getServletContext().getContextPath() %>/do/formAddEtudiant" class="btn btn-xs btn-primary">
+                <span class="glyphicon glyphicon-plus"></span> Ajouter un étudiant</a>
+        </div>
     </div>
     <table class="table table-striped table-hover" id="table-liste-etudiants">
         <thead>
@@ -54,7 +59,7 @@
         <tbody>
         <% for (Groupe groupe : groupes) { %>
             <tr class="tr-header">
-                <td>Groupe : <%= groupe.getLibelle() %></td>
+                <td>Groupe : <span class="label label-primary"><%= groupe.getLibelle() %></span></td>
                 <td></td>
                 <td></td>
             </tr>
