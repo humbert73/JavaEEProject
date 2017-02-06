@@ -26,18 +26,29 @@
 <body>
 <div class="container-fluid">
     <h1>Liste des étudiants du groupe <%= groupe.getLibelle() %></h1>
-    <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Groupes
-            <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-            <% for (Groupe groupeNav : groupes) { %>
-            <li>
-                <a href="<%= getServletContext().getContextPath() %>/do/listGroupe?libelle=<%= groupeNav.getLibelle() %>"><%= groupe.getLibelle() %>
-                </a></li>
-            <% } %>
-        </ul>
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Groupes
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <% for (Groupe groupeDropDown : groupes) { %>
+                    <li>
+                        <a href="<%= getServletContext().getContextPath() %>/do/listGroupe?libelle=<%= groupeDropDown.getLibelle() %>">
+                            <%= groupeDropDown.getLibelle() %>
+                        </a>
+                    </li>
+                    <% } %>
+                    <li class="divider"></li>
+                    <li><a href="<%= getServletContext().getContextPath() %>/do/formAddGroupe">Ajouter un Groupe</a>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <a href="<%= getServletContext().getContextPath() %>/do/formAddEtudiant" class="btn btn-xs btn-primary">
+                <span class="glyphicon glyphicon-plus"></span> Ajouter un étudiant</a>
+        </div>
     </div>
-    <button class="btn btn-xs">Ajouter un étudiant</button>
     <table class="table table-striped table-hover" id="table-liste-etudiants">
         <thead>
         <tr>
@@ -48,7 +59,7 @@
         </thead>
         <tbody>
             <tr class="tr-header">
-                <td>Groupe : <%= groupe.getLibelle() %></td>
+                <td>Groupe : <span class="label label-primary"><%= groupe.getLibelle() %></span></td>
                 <td></td>
                 <td></td>
             </tr>
